@@ -13,7 +13,7 @@ Hedef Kitle:
 
 SPRINT 1
 
-- Sprint Notları:
+- Sprint Notları: User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır. 
 - Tahmin Edilen Puan: Proje boyunca tamamlamayı beklediğimiz puan 45
 - Tamamlanacak Puan: Sprint-1'de hedeflediğimiz puan: 10, tamamladığımız puan: 
 - Tahmin Mantığı: Projemizde görevlerin tahmini puanlaması, Scrum metodolojisinde yaygın olan story point sistemine göre yapılmıştır. Puanlama sürecinde, her bir işin zorluk derecesi, yapılacak teknik iş yükü, belirsizlik düzeyi ve tahmini çaba dikkate alınmıştır.
