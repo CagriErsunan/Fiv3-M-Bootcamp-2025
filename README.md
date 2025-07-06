@@ -13,19 +13,19 @@ Hedef Kitle:
 
 SPRINT 1
 
-- Sprint Notları: User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır. 
+- Sprint Notları: User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır.
+  
 - Tahmin Edilen Puan: Proje boyunca tamamlamayı beklediğimiz puan 45
-- Tamamlanacak Puan: Sprint-1'de hedeflediğimiz puan: 10, tamamladığımız puan: 
-- Tahmin Mantığı: Projemizde görevlerin tahmini puanlaması, Scrum metodolojisinde yaygın olan story point sistemine göre yapılmıştır. Puanlama sürecinde, her bir işin zorluk derecesi, yapılacak teknik iş yükü, belirsizlik düzeyi ve tahmini çaba dikkate alınmıştır.
-
-Referans noktası olarak, en basit görevlerden biri olan “Unity sürümünün kararlaştırılması ve projenin açılması” görevi 1 story point olarak kabul edilmiştir. Diğer görevler bu görevle kıyaslanarak puanlanmıştır.
-
-Sprint başına tamamlanması hedeflenen story point sayısı, takımın ortalama çalışma kapasitesi ve tahmini velocity değerine göre belirlenmiştir.
-
-Takım 5 kişiden oluşmakta olup her üyenin haftalık ortalama 6–8 saat çalışabileceği varsayılmıştır. Bu doğrultuda ilk sprint için tahmini iş kapasitesi yaklaşık 10 story point olarak belirlenmiş ve sprint planlaması bu hedef doğrultusunda yapılmıştır.
-- Daily Scrum: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır. 
+  
+- Tamamlanacak Puan: Sprint-1'de hedeflediğimiz puan: 10, tamamladığımız puan:
+  
+- Tahmin Mantığı: Projemizde görevlerin tahmini puanlaması, Scrum metodolojisinde yaygın olan story point sistemine göre yapılmıştır. Puanlama sürecinde, her bir işin zorluk derecesi, yapılacak teknik iş yükü, belirsizlik düzeyi ve tahmini çaba dikkate alınmıştır. Referans noktası olarak, en basit görevlerden biri olan “Unity sürümünün kararlaştırılması ve projenin açılması” görevi 1 story point olarak kabul edilmiştir. Diğer görevler bu görevle kıyaslanarak puanlanmıştır. Sprint başına tamamlanması hedeflenen story point sayısı, takımın ortalama çalışma kapasitesi ve tahmini velocity değerine göre belirlenmiştir. Takım 5 kişiden oluşmakta olup her üyenin haftalık ortalama 6–8 saat çalışabileceği varsayılmıştır. Bu doğrultuda ilk sprint için tahmini iş kapasitesi yaklaşık 10 story point olarak belirlenmiş ve sprint planlaması bu hedef doğrultusunda yapılmıştır.
+  
+- Daily Scrum: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır.
 - Toplantı Ekran görüntüleri: https://imgur.com/a/mvlOW9N
+
 - Sprint Board Updates: "Sprint Board Ekran Görüntüsü"
+  
 - Screenshots: ![menu1](https://github.com/user-attachments/assets/2beb023e-5916-440d-a796-fde91a5d39e5)
 ![menu2](https://github.com/user-attachments/assets/0b8cc58f-15f5-4075-bd3b-298eae30bcb7)
 
