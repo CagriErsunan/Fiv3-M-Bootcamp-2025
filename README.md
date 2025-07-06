@@ -23,10 +23,12 @@ Referans noktası olarak, en basit görevlerden biri olan “Unity sürümünün
 Sprint başına tamamlanması hedeflenen story point sayısı, takımın ortalama çalışma kapasitesi ve tahmini velocity değerine göre belirlenmiştir.
 
 Takım 5 kişiden oluşmakta olup her üyenin haftalık ortalama 6–8 saat çalışabileceği varsayılmıştır. Bu doğrultuda ilk sprint için tahmini iş kapasitesi yaklaşık 10 story point olarak belirlenmiş ve sprint planlaması bu hedef doğrultusunda yapılmıştır.
-- Daily Scrum: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır.
-- "Toplantı Ekran görüntüleri" 
+- Daily Scrum: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır. 
+- Toplantı Ekran görüntüleri: https://imgur.com/a/mvlOW9N
 - Sprint Board Updates: "Sprint Board Ekran Görüntüsü"
-- Screenshots: "Yaptıklarımızın Ekran görüntüleri"
+- Screenshots: ![menu1](https://github.com/user-attachments/assets/2beb023e-5916-440d-a796-fde91a5d39e5)
+![menu2](https://github.com/user-attachments/assets/0b8cc58f-15f5-4075-bd3b-298eae30bcb7)
+
 - Sprint Review:  Sprint 1 sonunda hedeflenen 10 story point’in büyük kısmı başarıyla tamamlanmıştır.
 "Unity projesinin kurulması", "rollere karar verilmesi", "proje isminin belirlenmesi" ve "ana menünün temel haliyle oluşturulması" gibi görevler başarıyla tamamlanmıştır.
 Ana menüde temel geçişler ve UI yerleşimi oluşturulmuştur.
