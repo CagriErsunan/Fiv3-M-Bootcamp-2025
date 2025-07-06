@@ -23,19 +23,39 @@ SPRINT 1
   
 - Daily Scrum: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır.
 - Toplantı Ekran görüntüleri: https://imgur.com/a/mvlOW9N
-
-- Sprint Board Updates: "Sprint Board Ekran Görüntüsü"
   
-- Screenshots: ![menu1](https://github.com/user-attachments/assets/2beb023e-5916-440d-a796-fde91a5d39e5)
-![menu2](https://github.com/user-attachments/assets/0b8cc58f-15f5-4075-bd3b-298eae30bcb7)
-
+- Sprint Board Updates: ![board](https://github.com/user-attachments/assets/9f237071-5592-41a9-a618-3d8f7794da0a)
+  
+- <details>
+     <summary>Screenshots Göster/Gizle</summary>
+    
+    ![menu1](https://github.com/user-attachments/assets/2beb023e-5916-440d-a796-fde91a5d39e5)
+    ![menu2](https://github.com/user-attachments/assets/0b8cc58f-15f5-4075-bd3b-298eae30bcb7)
+    ![UI1](https://github.com/user-attachments/assets/837126f6-a193-4145-b51a-f6830f074481)
+    ![UI5](https://github.com/user-attachments/assets/2d17a356-86ac-45ab-8a77-45433b1b529f)
+  
+  </details>
+ 
 - Sprint Review:  Sprint 1 sonunda hedeflenen 10 story point’in büyük kısmı başarıyla tamamlanmıştır.
 "Unity projesinin kurulması", "rollere karar verilmesi", "proje isminin belirlenmesi" ve "ana menünün temel haliyle oluşturulması" gibi görevler başarıyla tamamlanmıştır.
 Ana menüde temel geçişler ve UI yerleşimi oluşturulmuştur.
 Bazı görevler ise (örneğin animasyonlar ve ses araştırması) başlatılmış ancak zaman kısıtı nedeniyle tamamlanamamıştır.
 Ürün şu anda temel proje çatısına sahiptir. Menü üzerinden sahne geçişleri test edilebilmektedir.
-Ekip içi görüşmelerde, oyunun dinamik yapısını yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınmasına karar verilmiştir. Ayrıca karakter modellerinin Low Poly stiline uygun olması gerektiği de vurgulanmıştır.
+Ekip içi görüşmelerde, oyunun dinamik yapısı
+nı yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınmasına karar verilmiştir. Ayrıca karakter modellerinin Low Poly stiline uygun olması gerektiği de vurgulanmıştır.
+  - Katılımcılar: Çağrı Ersunan, Begüm Orak, Tunahan Karabulut, Can Ceylan, Semiha Dalcalı
 
-Katılımcılar: Çağrı Ersunan, Begüm Orak, Tunahan Karabulut, Can Ceylan, Semiha Dalcalı
-
-- Sprint Retrospective: ""
+- Sprint Retrospective:
+  - Assetler kararlaştırıldı, UI tasarımı belirlendi, Ana Menü ve Ayarlar bölümleri hazırlandı.
+  - Düzenli olarak Slack üzerinden toplantılar yapılması kararlaştırıldı.
+  - Jira kullanılmasına karar verildi.
+  - İyi Gidenler:
+    - Görevler net tanımlandı ve sorumluluklar açık şekilde dağıtıldı.
+    - Unity projesi sorunsuz şekilde kuruldu ve temel menü sahnesi hazırlandı.
+    - Karar alma süreçlerinde ekip içi uyum yüksekti (örneğin proje isminin belirlenmesi).
+  - Geliştirilebilecek Noktalar:
+    - Günlük takibin (Daily Scrum) belirli bir saate bağlanmaması zaman zaman düzensizlik yarattı.
+    - Bazı görev açıklamaları çok genel kaldı (örneğin animasyonlar); detay eksikliği üretimi yavaşlattı.
+    - Araçlar arasında (WhatsApp–Meet–Slack) geçiş süreci vakit aldı.
+    - İlk Sprint, ekip üyelerinin yoğunluk yaşadığı bir dönemde gerçekleştiğinden istenilen performans gösterilemedi. Sonraki Sprintlerde bu performans açığının giderilecek şekilde çalışılmasına karar verildi.
+    
