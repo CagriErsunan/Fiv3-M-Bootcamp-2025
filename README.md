@@ -17,7 +17,7 @@ SPRINT 1
   
 - Tahmin Edilen Puan: Proje boyunca tamamlamayı beklediğimiz puan 45
   
-- Tamamlanacak Puan: Sprint-1'de hedeflediğimiz puan: 10, tamamladığımız puan:
+- Tamamlanacak Puan: Sprint-1'de hedeflediğimiz puan: 10, tamamladığımız puan: 10
   
 - Tahmin Mantığı: Projemizde görevlerin tahmini puanlaması, Scrum metodolojisinde yaygın olan story point sistemine göre yapılmıştır. Puanlama sürecinde, her bir işin zorluk derecesi, yapılacak teknik iş yükü, belirsizlik düzeyi ve tahmini çaba dikkate alınmıştır. Referans noktası olarak, en basit görevlerden biri olan “Unity sürümünün kararlaştırılması ve projenin açılması” görevi 1 story point olarak kabul edilmiştir. Diğer görevler bu görevle kıyaslanarak puanlanmıştır. Sprint başına tamamlanması hedeflenen story point sayısı, takımın ortalama çalışma kapasitesi ve tahmini velocity değerine göre belirlenmiştir. Takım 5 kişiden oluşmakta olup her üyenin haftalık ortalama 6–8 saat çalışabileceği varsayılmıştır. Bu doğrultuda ilk sprint için tahmini iş kapasitesi yaklaşık 10 story point olarak belirlenmiş ve sprint planlaması bu hedef doğrultusunda yapılmıştır.
   
