@@ -11,20 +11,20 @@ Hedef Kitle:
 
 
 
-SPRINT 1
+### SPRINT 1
 
-- Sprint Notları: User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır.
+- **Sprint Notları** : User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır.
   
-- Tahmin Edilen Puan: Proje boyunca tamamlamayı beklediğimiz puan 45
+- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan 45. Sprint-1'de hedeflediğimiz puan: 10. Sprint 1 boyunca tamamladığımız puan: 10
   
-- Tamamlanacak Puan: Sprint-1'de hedeflediğimiz puan: 10, tamamladığımız puan: 10
+- **Tahmin Mantığı**: Görev puanlaması, Scrum metodolojisinde kullanılan **Story Point** sistemine göre yapılmıştır.  
+Puanlar, görevin teknik karmaşıklığı, belirsizlik düzeyi ve gereken çaba baz alınarak ekipçe tahminlenmiştir.  
+Referans görevi olarak "Unity sürümünün kararlaştırılması ve projenin açılması" 1 SP olarak alınmış ve diğer görevler bu temele göre oranlanmıştır.  
+Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saatlik katkısı esas alınarak **yaklaşık 10 SP** olarak belirlenmiştir. İşte SPRINT 1'de tamamlanan görevlerimiz için Bu mantığa göre puan dağılımımız: ![Puan mantığı](https://github.com/user-attachments/assets/e998a4f3-03ea-4530-9005-8fc530078517)
+
+- **Daily Scrum**: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır. Toplantı Ekran görüntüleri: https://imgur.com/a/mvlOW9N
   
-- Tahmin Mantığı: Projemizde görevlerin tahmini puanlaması, Scrum metodolojisinde yaygın olan story point sistemine göre yapılmıştır. Puanlama sürecinde, her bir işin zorluk derecesi, yapılacak teknik iş yükü, belirsizlik düzeyi ve tahmini çaba dikkate alınmıştır. Referans noktası olarak, en basit görevlerden biri olan “Unity sürümünün kararlaştırılması ve projenin açılması” görevi 1 story point olarak kabul edilmiştir. Diğer görevler bu görevle kıyaslanarak puanlanmıştır. Sprint başına tamamlanması hedeflenen story point sayısı, takımın ortalama çalışma kapasitesi ve tahmini velocity değerine göre belirlenmiştir. Takım 5 kişiden oluşmakta olup her üyenin haftalık ortalama 6–8 saat çalışabileceği varsayılmıştır. Bu doğrultuda ilk sprint için tahmini iş kapasitesi yaklaşık 10 story point olarak belirlenmiş ve sprint planlaması bu hedef doğrultusunda yapılmıştır.
-  
-- Daily Scrum: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır.
-- Toplantı Ekran görüntüleri: https://imgur.com/a/mvlOW9N
-  
-- Sprint Board Updates: ![board](https://github.com/user-attachments/assets/9f237071-5592-41a9-a618-3d8f7794da0a)
+- **Sprint Board Updates**: ![board](https://github.com/user-attachments/assets/9f237071-5592-41a9-a618-3d8f7794da0a)
   
 - <details>
      <summary>Screenshots Göster/Gizle</summary>
@@ -36,7 +36,7 @@ SPRINT 1
   
   </details>
  
-- Sprint Review:  Sprint 1 sonunda hedeflenen 10 story point’in büyük kısmı başarıyla tamamlanmıştır.
+- **Sprint Review**:  Sprint 1 sonunda hedeflenen 10 story point’in büyük kısmı başarıyla tamamlanmıştır.
 "Unity projesinin kurulması", "rollere karar verilmesi", "proje isminin belirlenmesi" ve "ana menünün temel haliyle oluşturulması" gibi görevler başarıyla tamamlanmıştır.
 Ana menüde temel geçişler ve UI yerleşimi oluşturulmuştur.
 Bazı görevler ise (örneğin animasyonlar ve ses araştırması) başlatılmış ancak zaman kısıtı nedeniyle tamamlanamamıştır.
@@ -45,7 +45,7 @@ Ekip içi görüşmelerde, oyunun dinamik yapısı
 nı yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınmasına karar verilmiştir. Ayrıca karakter modellerinin Low Poly stiline uygun olması gerektiği de vurgulanmıştır.
   - Katılımcılar: Çağrı Ersunan, Begüm Orak, Tunahan Karabulut, Can Ceylan, Semiha Dalcalı
 
-- Sprint Retrospective:
+- **Sprint Retrospective**:
   - Assetler kararlaştırıldı, UI tasarımı belirlendi, Ana Menü ve Ayarlar bölümleri hazırlandı.
   - Düzenli olarak Slack üzerinden toplantılar yapılması kararlaştırıldı.
   - Jira kullanılmasına karar verildi.
@@ -59,3 +59,4 @@ nı yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınm
     - Araçlar arasında (WhatsApp–Meet–Slack) geçiş süreci vakit aldı.
     - İlk Sprint, ekip üyelerinin yoğunluk yaşadığı bir dönemde gerçekleştiğinden istenilen performans gösterilemedi. Sonraki Sprintlerde bu performans açığının giderilecek şekilde çalışılmasına karar verildi.
     
+
