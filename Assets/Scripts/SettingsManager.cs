@@ -9,7 +9,7 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private GameObject volumeSlider;
     [SerializeField] private GameObject fullScreenToggle;
     [SerializeField] private GameObject resolutionDropdown;
-    [SerializeField] private GameObject graphicsQualityDropdown;
+   // [SerializeField] private GameObject graphicsQualityDropdown;
 
     Resolution[] resolutions;
 
@@ -28,7 +28,7 @@ public class SettingsManager : MonoBehaviour
         fullScreenToggle.GetComponent<Toggle>().onValueChanged.AddListener(SetFullScreen);
 
         // ÇÖZÜNÜRLÜKLERİ TESPİT ETME VE DROPDOWN'A DOLDURMA
-        resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
+       /* resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
         resolutionDropdown.GetComponent<Dropdown>().ClearOptions(); // Dropdown'ı temizle
 
         List<string> options = new List<string>();
@@ -55,7 +55,7 @@ public class SettingsManager : MonoBehaviour
         resolutionDropdown.GetComponent<Dropdown>().RefreshShownValue();
         SetResolution(savedResolutionIndex); // Oyunu kaydedilmiş çözünürlükte başlat
 
-        resolutionDropdown.GetComponent<Dropdown>().onValueChanged.AddListener(SetResolution);
+        resolutionDropdown.GetComponent<Dropdown>().onValueChanged.AddListener(SetResolution); */
     
         
     }
