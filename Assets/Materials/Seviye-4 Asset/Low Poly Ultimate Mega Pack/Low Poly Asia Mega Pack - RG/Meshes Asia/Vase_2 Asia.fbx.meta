@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 5cb3610c70e6513449fe1f5b2f653e64
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -1750419284524856126
+    second: Vase_2|Armature.001|mixamo.com|Layer0.001
+  - first:
+      74: -2191539517211309412
+    second: Vase_2|Armature.002|mixamo.com|Layer0
+  - first:
+      74: 7333223064369391216
+    second: Vase_2|Armature.003|Armature.002|Armature.001|mixamo.com|Layer0.00
+  - first:
+      74: -3040736019244941335
+    second: Vase_2|Armature.004|mixamo.com|Layer0.002
+  - first:
+      74: 427649315225949051
+    second: Vase_2|Armature.004|mixamo.com|Layer0.003
+  - first:
+      74: 8503771790506043050
+    second: Vase_2|Armature.005|mixamo.com|Layer0.001
+  - first:
+      74: 4973002956952273580
+    second: Vase_2|Armature.005|mixamo.com|Layer0.003
+  - first:
+      74: -3418746788581627954
+    second: Vase_2|K_BuGaoPai01|Take 001|BaseLayer.001
+  - first:
+      74: 8575069267790372975
+    second: Vase_2|K_JiuTan01|Take 001|BaseLayer
+  - first:
+      74: -2657665151418002260
+    second: Vase_2|K_KaoRuZhu01|Take 001|BaseLayer
+  - first:
+      74: -6740114318840833005
+    second: Vase_2|K_LianDanLu01|Take 001|BaseLayer
+  - first:
+      74: -565058911042622617
+    second: Vase_2|K_MaDai01|Take 001|BaseLayer
+  - first:
+      74: 4263722421939389208
+    second: Vase_2|K_XiaoBaoGuo01|Take 001|BaseLayer
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lid
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vase
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 3
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243947
+  packageName: Low Poly Asia Mega Pack RG
+  packageVersion: 1.0
+  assetPath: Assets/Low Poly Ultimate Mega Pack/Low Poly Asia Mega Pack - RG/Meshes
+    Asia/Vase_2 Asia.fbx
+  uploadId: 562758

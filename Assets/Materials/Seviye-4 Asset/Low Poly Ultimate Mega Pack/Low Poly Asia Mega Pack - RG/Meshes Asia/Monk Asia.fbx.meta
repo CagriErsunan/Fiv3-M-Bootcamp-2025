@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: 588ca0e42dd6f124e92578180ea7af8a
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 7074147427249006067
+    second: Monk Armature|Armature.001|mixamo.com|Layer0.001
+  - first:
+      74: -7089218968751217143
+    second: Monk Armature|Armature.002|mixamo.com|Layer0
+  - first:
+      74: 3714543663808571857
+    second: Monk Armature|Armature.003|Armature.002|Armature.001|mixamo.com|Layer0.00
+  - first:
+      74: 7871376732784685487
+    second: Monk Armature|Armature.003|Armature.002|Armature.001|mixamo.com|Layer0.001|Ar
+  - first:
+      74: 8999594166291217817
+    second: Monk Armature|Armature.003|Armature.002|Armature.002|mixamo.com|Layer0|Ar
+  - first:
+      74: -5394203373706889944
+    second: Monk Armature|Armature.003|Armature.002|Armature.002|mixamo.com|Layer0|Armatu
+  - first:
+      74: 9136030307108790331
+    second: Monk Armature|Armature.003|Armature.002|TPose.001|Armature.002|TPose.001
+  - first:
+      74: 7656305755373385449
+    second: Monk Armature|Armature.003|Armature.002|TPose.001|Armature.002|TPose.002
+  - first:
+      74: -8973433615573356737
+    second: Monk Armature|Armature.004|Armature.001|Armature.001|mixamo.com|Layer0.001|Ar
+  - first:
+      74: -1691739728041476525
+    second: Monk Armature|Armature.004|Armature.001|TPose.001|Armature.001|TPose.001
+  - first:
+      74: 6389754477389101788
+    second: Monk Armature|Armature.004|Armature.002|Armature.001|mixamo.com|Layer0.001|Ar
+  - first:
+      74: -3430984199253933423
+    second: Monk Armature|Armature.004|Armature.002|Armature.002|mixamo.com|Layer0|Armatu
+  - first:
+      74: 7665964619961321897
+    second: Monk Armature|Armature.004|Armature.002|TPose.001|Armature.002|TPose.001
+  - first:
+      74: 7751834706134900651
+    second: Monk Armature|Armature.004|mixamo.com|Layer0.002
+  - first:
+      74: 831262536303362672
+    second: Monk Armature|Armature.004|mixamo.com|Layer0.003
+  - first:
+      74: 1026690202118852635
+    second: Monk Armature|Armature.005|Armature.002|Armature.001|mixamo.com|Layer0.001|Ar
+  - first:
+      74: -5831900149423978393
+    second: Monk Armature|Armature.005|Armature.002|Armature.002|mixamo.com|Layer0|Armatu
+  - first:
+      74: -2458148264573227653
+    second: Monk Armature|Armature.005|Armature.002|TPose.001|Armature.002|TPose.001
+  - first:
+      74: 8228052885859905697
+    second: Monk Armature|Armature.005|mixamo.com|Layer0.001
+  - first:
+      74: -3516508270673531118
+    second: Monk Armature|Ninja Armature.001|Ninja Armature|TPose.001|Ninja Armature|TPos
+  - first:
+      74: -3617184891155170148
+    second: Monk Armature|TPose.001
+  - first:
+      74: 236767715351583843
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.001|mixa
+  - first:
+      74: -4826209749523049448
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.002|mixa
+  - first:
+      74: 8248402836351102170
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.003|
+  - first:
+      74: -7469708780184069827
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.003|.001
+  - first:
+      74: -9140854326742938998
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.003|.002
+  - first:
+      74: 1642932736832050771
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.003|.003
+  - first:
+      74: 8572216909713176229
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.003|.004
+  - first:
+      74: -9112898313760381233
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.003|Arma
+  - first:
+      74: -4212433431661445716
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.004|
+  - first:
+      74: 5242876140460169096
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.004|.001
+  - first:
+      74: 5572498177266952228
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.004|Arma
+  - first:
+      74: 3023429749690189
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.004|mixa
+  - first:
+      74: -8906403128827738577
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.005|
+  - first:
+      74: 4739032979731560648
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.005|.001
+  - first:
+      74: 6549612566633172116
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|Armature.005|Arma
+  - first:
+      74: -3125629110482915427
+    second: Monk Armature|Village Woman Armature|Village Woman Armature|TPose.001|Village
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CH_SHOES.018
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EYES.012
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monk Cloths. 2.001
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monk Cloths.001
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monk Socks.001
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth2.002
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SKIN.015
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.002
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 3
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243947
+  packageName: Low Poly Asia Mega Pack RG
+  packageVersion: 1.0
+  assetPath: Assets/Low Poly Ultimate Mega Pack/Low Poly Asia Mega Pack - RG/Meshes
+    Asia/Monk Asia.fbx
+  uploadId: 562758

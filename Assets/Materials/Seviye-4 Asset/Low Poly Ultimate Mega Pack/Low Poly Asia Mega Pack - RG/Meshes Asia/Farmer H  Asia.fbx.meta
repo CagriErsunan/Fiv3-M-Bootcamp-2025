@@ -1,0 +1,263 @@
+fileFormatVersion: 2
+guid: 5a36c73c7302cfd4a99ed46d50125d07
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -8972539888827989316
+    second: Farmer Armature|Armature.001|mixamo.com|Layer0.001
+  - first:
+      74: -4370902940594129565
+    second: Farmer Armature|Armature.002|mixamo.com|Layer0
+  - first:
+      74: 8266312647949587630
+    second: Farmer Armature|Armature.003|Armature.002|Armature.001|mixamo.com|Layer0.00
+  - first:
+      74: 6950760082735852345
+    second: Farmer Armature|Armature.003|Armature.002|Armature.001|mixamo.com|Layer0.001|Ar
+  - first:
+      74: 552708423326085877
+    second: Farmer Armature|Armature.003|Armature.002|Armature.002|mixamo.com|Layer0|Ar
+  - first:
+      74: 1753257309050782603
+    second: Farmer Armature|Armature.003|Armature.002|Armature.002|mixamo.com|Layer0|Armatu
+  - first:
+      74: 2296562422838180856
+    second: Farmer Armature|Armature.003|Armature.002|TPose.001|Armature.002|TPose.001
+  - first:
+      74: 6156234587799899146
+    second: Farmer Armature|Armature.003|Armature.002|TPose.001|Armature.002|TPose.002
+  - first:
+      74: -3147210756069428967
+    second: Farmer Armature|Armature.004|Armature.002|Armature.001|mixamo.com|Layer0.001|Ar
+  - first:
+      74: 7284573629667744979
+    second: Farmer Armature|Armature.004|Armature.002|Armature.002|mixamo.com|Layer0|Armatu
+  - first:
+      74: 580166892362645116
+    second: Farmer Armature|Armature.004|Armature.002|TPose.001|Armature.002|TPose.001
+  - first:
+      74: 6091257231298111485
+    second: Farmer Armature|Armature.004|mixamo.com|Layer0.002
+  - first:
+      74: -690445500729368841
+    second: Farmer Armature|Armature.004|mixamo.com|Layer0.003
+  - first:
+      74: -1360608222296747364
+    second: Farmer Armature|Armature.005|Armature.002|Armature.001|mixamo.com|Layer0.001|Ar
+  - first:
+      74: 6552906533164368197
+    second: Farmer Armature|Armature.005|Armature.002|Armature.002|mixamo.com|Layer0|Armatu
+  - first:
+      74: -7028810919255851238
+    second: Farmer Armature|Armature.005|Armature.002|TPose.001|Armature.002|TPose.001
+  - first:
+      74: 3872140837042910715
+    second: Farmer Armature|TPose.001
+  - first:
+      74: 4644159748309647797
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.001|mixa
+  - first:
+      74: 8203496953847025141
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.002|mixa
+  - first:
+      74: 1973584815696664033
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.003|
+  - first:
+      74: 4148867194990301960
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.003|.001
+  - first:
+      74: -5920821600620233060
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.003|.002
+  - first:
+      74: -4867125710125128565
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.003|.003
+  - first:
+      74: 7334173169380969835
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.003|.004
+  - first:
+      74: 3178688408051884610
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.003|Arma
+  - first:
+      74: -3262353974054604871
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.004|
+  - first:
+      74: -7212238956212303886
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.004|.001
+  - first:
+      74: -7644927458205409177
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.004|Arma
+  - first:
+      74: -7787455414617620967
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.004|mixa
+  - first:
+      74: -9096518066238981165
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.005|
+  - first:
+      74: 7366088771523108409
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.005|.001
+  - first:
+      74: 9180309846076748966
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|Armature.005|Arma
+  - first:
+      74: 4062989464708329637
+    second: Farmer Armature|Village Woman Armature|Village Woman Armature|TPose.001|Village
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CH-Cloths_8.006
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CH_Hair.015
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CH_SHOES.020
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EYES.003
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth2.001
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants.001
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SKIN.012
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.001
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hat_1.002
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hat_1.003
+    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 3
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 243947
+  packageName: Low Poly Asia Mega Pack RG
+  packageVersion: 1.0
+  assetPath: Assets/Low Poly Ultimate Mega Pack/Low Poly Asia Mega Pack - RG/Meshes
+    Asia/Farmer H  Asia.fbx
+  uploadId: 562758
