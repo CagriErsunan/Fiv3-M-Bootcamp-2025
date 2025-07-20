@@ -15,7 +15,7 @@ Hedef Kitle:
 
 - **Sprint Notları** : User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır.
   
-- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 55 puan. Sprint-1'de hedeflediğimiz puan: 10. Sprint 1 boyunca tamamladığımız puan: 10
+- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 100 puan. Sprint-1'de hedeflediğimiz puan: 10. Sprint 1 boyunca tamamladığımız puan: 10
   
 - **Tahmin Mantığı**: Görev puanlaması, Scrum metodolojisinde kullanılan **Story Point** sistemine göre yapılmıştır.  
 Puanlar, görevin teknik karmaşıklığı, belirsizlik düzeyi ve gereken çaba baz alınarak ekipçe tahminlenmiştir.  
@@ -63,31 +63,28 @@ nı yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınm
 
 - **Sprint Notları** : User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır.
   
-- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 55 puan. Sprint-2'de hedeflediğimiz puan: 10. Sprint 2 boyunca tamamladığımız puan: 10
+- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 100 puan. Sprint-2'de hedeflediğimiz puan: 10. Sprint 2 boyunca tamamladığımız puan: 10
   
 - **Tahmin Mantığı**: Görev puanlaması, Scrum metodolojisinde kullanılan **Story Point** sistemine göre yapılmıştır.  
 Puanlar, görevin teknik karmaşıklığı, belirsizlik düzeyi ve gereken çaba baz alınarak ekipçe tahminlenmiştir.  
 Referans görevi olarak "Unity sürümünün kararlaştırılması ve projenin açılması" 1 SP olarak alınmış ve diğer görevler bu temele göre oranlanmıştır.  
 Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saatlik katkısı esas alınarak **yaklaşık 10 SP** olarak belirlenmiştir. İşte SPRINT 1'de tamamlanan görevlerimiz için Bu mantığa göre puan dağılımımız: ![Puan mantığı](https://github.com/user-attachments/assets/e998a4f3-03ea-4530-9005-8fc530078517)
 
-- **Daily Scrum**: Toplantılarımız ve Konuşmalarımızın önce WhatsApp ve Google Meet, daha sonra ise WhatsApp ve Slack üzerinden yapılması kararlaştırılmıştır. Toplantı Ekran görüntüleri: https://imgur.com/a/mvlOW9N
+- **Daily Scrum**: Toplantılarımız ve konuşmalarımız WhatsApp ve Slack üzerinden yapılmaktadır. Toplantı Ekran görüntüleri:
   
 - **Sprint Board Updates**: ![board](https://github.com/user-attachments/assets/9f237071-5592-41a9-a618-3d8f7794da0a)
   
 - <details>
      <summary>Screenshots Göster/Gizle</summary>
     
-    ![menu1](https://github.com/user-attachments/assets/2beb023e-5916-440d-a796-fde91a5d39e5)
-    ![menu2](https://github.com/user-attachments/assets/0b8cc58f-15f5-4075-bd3b-298eae30bcb7)
-    ![UI1](https://github.com/user-attachments/assets/837126f6-a193-4145-b51a-f6830f074481)
-    ![UI5](https://github.com/user-attachments/assets/2d17a356-86ac-45ab-8a77-45433b1b529f)
+  
   
   </details>
  
-- **Sprint Review**:  Sprint 1 sonunda hedeflenen 10 story point’in büyük kısmı başarıyla tamamlanmıştır.
+- **Sprint Review**:  Sprint 2 sonunda hedeflenen 50 story point’in çoğunluğu başarıyla tamamlanmıştır.
 "Unity projesinin kurulması", "rollere karar verilmesi", "proje isminin belirlenmesi" ve "ana menünün temel haliyle oluşturulması" gibi görevler başarıyla tamamlanmıştır.
 Ana menüde temel geçişler ve UI yerleşimi oluşturulmuştur.
-Bazı görevler ise (örneğin animasyonlar ve ses araştırması) başlatılmış ancak zaman kısıtı nedeniyle tamamlanamamıştır.
+Bazı görevler ise (örneğin animasyonlar ve ses araştırması) başlatılmış ancak henüz tamamlanamamıştır.
 Ürün şu anda temel proje çatısına sahiptir. Menü üzerinden sahne geçişleri test edilebilmektedir.
 Ekip içi görüşmelerde, oyunun dinamik yapısı
 nı yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınmasına karar verilmiştir. Ayrıca karakter modellerinin Low Poly stiline uygun olması gerektiği de vurgulanmıştır.
