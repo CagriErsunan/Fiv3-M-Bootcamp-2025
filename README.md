@@ -75,8 +75,8 @@ Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saa
 - **Daily Scrum**: Toplantılarımız ve konuşmalarımız WhatsApp ve Slack üzerinden yapılmaktadır. Toplantı Ekran görüntüleri: https://imgur.com/a/cbLCQjw
   
 - **Sprint Board Updates**: <img width="1853" height="1047" alt="tablo1" src="https://github.com/user-attachments/assets/4efa8ba2-1113-4ba1-b13d-e314792d7a5f" />
-<img width="1851" height="1051" alt="tablo2" src="https://github.com/user-attachments/assets/a4c02ece-84ff-49f4-bdcd-5c14e7dda974" />
-<img width="1843" height="203" alt="tablo3" src="https://github.com/user-attachments/assets/98fe1779-c1f8-4dbf-a897-9c0b2ef4bb6a" />
+  <img width="1851" height="1051" alt="tablo2" src="https://github.com/user-attachments/assets/a4c02ece-84ff-49f4-bdcd-5c14e7dda974" />
+  <img width="1843" height="203" alt="tablo3" src="https://github.com/user-attachments/assets/98fe1779-c1f8-4dbf-a897-9c0b2ef4bb6a" />
 
   
 - <details>
