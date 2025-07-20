@@ -76,30 +76,44 @@ Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saa
   
 - <details>
      <summary>Screenshots Göster/Gizle</summary>
-    
-  
-  
+    - <img width="1843" height="203" alt="tablo3" src="https://github.com/user-attachments/assets/98fe1779-c1f8-4dbf-a897-9c0b2ef4bb6a" />
+    - <img width="1851" height="1051" alt="tablo2" src="https://github.com/user-attachments/assets/a4c02ece-84ff-49f4-bdcd-5c14e7dda974" />
+    - <img width="1853" height="1047" alt="tablo1" src="https://github.com/user-attachments/assets/4efa8ba2-1113-4ba1-b13d-e314792d7a5f" />
   </details>
  
-- **Sprint Review**:  Sprint 2 sonunda hedeflenen 50 story point’in çoğunluğu başarıyla tamamlanmıştır.
-"Unity projesinin kurulması", "rollere karar verilmesi", "proje isminin belirlenmesi" ve "ana menünün temel haliyle oluşturulması" gibi görevler başarıyla tamamlanmıştır.
-Ana menüde temel geçişler ve UI yerleşimi oluşturulmuştur.
-Bazı görevler ise (örneğin animasyonlar ve ses araştırması) başlatılmış ancak henüz tamamlanamamıştır.
-Ürün şu anda temel proje çatısına sahiptir. Menü üzerinden sahne geçişleri test edilebilmektedir.
-Ekip içi görüşmelerde, oyunun dinamik yapısı
-nı yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınmasına karar verilmiştir. Ayrıca karakter modellerinin Low Poly stiline uygun olması gerektiği de vurgulanmıştır.
+- **Sprint Review**: Sprint 2 sonunda hedeflenen 50 story point’in 37'si başarıyla tamamlanmıştır. Bu sprintteki ana hedef, temel bir multiplayer oyun döngüsü oluşturmak ve oynanabilir mini oyunları hayata geçirmekti. Bu hedefe büyük ölçüde ulaşılmıştır.
+
+  - Multiplayer Altyapısı: Ana menü üzerinden lobi oluşturma, lobiye katılma özellikleri tamamen işlevseldir. Lobi, dinamik olarak minimum oyuncu gereksinimini karşıladığında oyunu başlatabilmektedir.
+  
+  - Oynanabilir Mini Oyunlar: Toplam 6 adet mini oyunun temel mekanikleri tamamlanmış ve oynanabilir duruma getirilmiştir: Cambaz Tepsisi (Denge), Kart Race (Yarış), Reflex Game (Tepki), Zombi Enfeksiyonu, Boyut Değiştirme ve Boss Savaşı.
+  
+  - Oyun Döngüsü: Oyuncular bir lobiye katılıp, harita oylaması yapıp, mini oyunu oynayıp, oyun sonunda tekrar oyna oylaması yapabilmektedir.
+  
+  - Ek Özellikler: Karakterler için "Emote" özelliği, oyunun hikayesini anlatan bir "intro sinematiği" ve "oyuncu kozmetiği menüsü"nün görsel tasarımı tamamlanmıştır.
+  
+  - Mevcut Ürünün Durumu: Ürün, paylaşılan bir sunucu üzerinde fonksiyonel olarak multiplayer oynanabilir bir prototip aşamasındadır. Birkaç küçük pürüz giderildikten sonra geniş çaplı testlere hazır olacaktır.
+
+  
   - Katılımcılar: Çağrı Ersunan, Begüm Orak, Tunahan Karabulut, Can Ceylan, Semiha Dalcalı
 
 - **Sprint Retrospective**:
-  - Assetler kararlaştırıldı, UI tasarımı belirlendi, Ana Menü ve Ayarlar bölümleri hazırlandı.
-  - Düzenli olarak Slack üzerinden toplantılar yapılması kararlaştırıldı.
-  - Jira kullanılmasına karar verildi.
+  Bu sprintte ekibin üretkenliği ve uyumu yüksekti. Multiplayer gibi karmaşık bir sistemin altından başarıyla kalkıldı. Ancak sürecimizi daha da iyileştirebileceğimiz noktalar tespit edildi.
+
   - İyi Gidenler:
-    - Görevler net tanımlandı ve sorumluluklar açık şekilde dağıtıldı.
-    - Unity projesi sorunsuz şekilde kuruldu ve temel menü sahnesi hazırlandı.
-    - Karar alma süreçlerinde ekip içi uyum yüksekti (örneğin proje isminin belirlenmesi).
+  
+    -Paralel Çalışma: Mini oyun görevleri net bir şekilde ayrıldığı için birden fazla kişi aynı anda farklı oyunlar üzerinde çakışma yaşamadan çalışabildi. 
+    -Hızlı Entegrasyon: Harita tasarımları ve seviye mekaniklerinin entegrasyonu, tasarım ve yazılım ekibi arasındaki güçlü iletişim sayesinde çok hızlı ilerledi.
+    -Net Hedef: "Çalışan bir multiplayer döngüsü" hedefi, tüm ekibi motive etti ve sprint boyunca odaklanmayı kolaylaştırdı.
+  
   - Geliştirilebilecek Noktalar:
-    - Günlük takibin (Daily Scrum) belirli bir saate bağlanmaması zaman zaman düzensizlik yarattı.
-    - Bazı görev açıklamaları çok genel kaldı (örneğin animasyonlar); detay eksikliği üretimi yavaşlattı.
-    - Araçlar arasında (WhatsApp–Meet–Slack) geçiş süreci vakit aldı.
-    - İlk Sprint, ekip üyelerinin yoğunluk yaşadığı bir dönemde gerçekleştiğinden istenilen performans gösterilemedi. Sonraki Sprintlerde bu performans açığının giderilecek şekilde çalışılmasına karar verildi.
+  
+    - Bazı seviyelere eklenebilecek ve oynanış kalitesini & keyfini artıracak özellikler düşünüldü. Bir aksilik olmadığı takdirde 3. sprintte bu özellikler eklenecek
+
+  -Alınan Kararlar:
+  
+  - Hikaye bölümü ve anlatımını güçlendirecek intro videosu & görsel roman eklemeye karar verildi.
+  - Toplantıların 2 günde 1 yapılmasına karar verildi.
+  - Tüm bölümlerin birleştirilmesi ve rastgele geçişine karar verildi.
+  -  
+  
+
