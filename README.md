@@ -118,7 +118,7 @@ Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saa
 
   - Ek Özellikler: Karakterler için "Emote" özelliği, oyunun hikayesini anlatan bir "intro sinematiği" ve "oyuncu kozmetiği menüsü hazırlanmıştır.
 
-  -Karakter Kontrolleri: Karakter kontrolleri tamamlanmıştır. Var olan özeellikler: Yürüme, Koşma, Zıplama, İtme gibi kontrollerimiz bulunmaktadır. 
+  - Karakter Kontrolleri: Karakter kontrolleri tamamlanmıştır. Var olan özellikler: Yürüme, Koşma, Zıplama, İtme gibi kontrollerimiz bulunmaktadır. 
   
   - Mevcut Ürünün Durumu: Ürün, paylaşılan bir sunucu üzerinde fonksiyonel olarak multiplayer oynanabilir bir prototip aşamasındadır. Birkaç küçük pürüz giderildikten sonra geniş çaplı testlere hazır olacaktır.
 
@@ -126,19 +126,19 @@ Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saa
 
 - **Sprint Retrospective**:
 
-  Bu sprintte ekibin üretkenliği ve uyumu yüksekti. Multiplayer gibi karmaşık bir sistemin altından başarıyla kalkıldı. Ancak sürecimizi daha da iyileştirebileceğimiz noktalar tespit edildi.
+    Bu sprintte ekibin üretkenliği ve uyumu yüksekti. Multiplayer gibi karmaşık bir sistemin altından başarıyla kalkıldı. Ancak sürecimizi daha da iyileştirebileceğimiz noktalar tespit edildi.
 
   - İyi Gidenler:
   
-    -Paralel Çalışma: Mini oyun görevleri net bir şekilde ayrıldığı için birden fazla kişi aynı anda farklı oyunlar üzerinde çakışma yaşamadan çalışabildi. 
-    -Hızlı Entegrasyon: Harita tasarımları ve seviye mekaniklerinin entegrasyonu, tasarım ve yazılım ekibi arasındaki güçlü iletişim sayesinde çok hızlı ilerledi.
-    -Net Hedef: "Çalışan bir multiplayer döngüsü" hedefi, tüm ekibi motive etti ve sprint boyunca odaklanmayı kolaylaştırdı.
+    - Paralel Çalışma: Mini oyun görevleri net bir şekilde ayrıldığı için birden fazla kişi aynı anda farklı oyunlar üzerinde çakışma yaşamadan çalışabildi. 
+    - Hızlı Entegrasyon: Harita tasarımları ve seviye mekaniklerinin entegrasyonu, tasarım ve yazılım ekibi arasındaki güçlü iletişim sayesinde çok hızlı ilerledi.
+    - Net Hedef: "Çalışan bir multiplayer döngüsü" hedefi, tüm ekibi motive etti ve sprint boyunca odaklanmayı kolaylaştırdı.
   
   - Geliştirilebilecek Noktalar:
   
     - Bazı seviyelere eklenebilecek ve oynanış kalitesini & keyfini artıracak özellikler düşünüldü. Bir aksilik olmadığı takdirde 3. sprintte bu özellikler eklenecek
 
-  -Alınan Kararlar:
+  - Alınan Kararlar:
   
     - Hikaye bölümü ve anlatımını güçlendirecek intro videosu & görsel roman eklemeye karar verildi.
     - Toplantıların 2 günde 1 yapılmasına karar verildi.
