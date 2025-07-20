@@ -63,7 +63,7 @@ nı yansıtacak şekilde her mini oyunun bağımsız bir sahne olarak ele alınm
 
 - **Sprint Notları** : User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır.
   
-- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 100 puan. Sprint-2'de hedeflediğimiz puan: 10. Sprint 2 boyunca tamamladığımız puan: 10
+- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 100 puan. Sprint-2'de hedeflediğimiz puan: 50. Sprint 2 boyunca tamamladığımız puan: 37
   
 - **Tahmin Mantığı**: Görev puanlaması, Scrum metodolojisinde kullanılan **Story Point** sistemine göre yapılmıştır.  
 Puanlar, görevin teknik karmaşıklığı, belirsizlik düzeyi ve gereken çaba baz alınarak ekipçe tahminlenmiştir.  
