@@ -72,13 +72,14 @@ Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saa
 
 - **Daily Scrum**: Toplantılarımız ve konuşmalarımız WhatsApp ve Slack üzerinden yapılmaktadır. Toplantı Ekran görüntüleri:
   
-- **Sprint Board Updates**: ![board](https://github.com/user-attachments/assets/9f237071-5592-41a9-a618-3d8f7794da0a)
+- **Sprint Board Updates**: - <img width="1853" height="1047" alt="tablo1" src="https://github.com/user-attachments/assets/4efa8ba2-1113-4ba1-b13d-e314792d7a5f" />
+- <img width="1851" height="1051" alt="tablo2" src="https://github.com/user-attachments/assets/a4c02ece-84ff-49f4-bdcd-5c14e7dda974" />
+- <img width="1843" height="203" alt="tablo3" src="https://github.com/user-attachments/assets/98fe1779-c1f8-4dbf-a897-9c0b2ef4bb6a" />
+
   
 - <details>
      <summary>Screenshots Göster/Gizle</summary>
-    - <img width="1843" height="203" alt="tablo3" src="https://github.com/user-attachments/assets/98fe1779-c1f8-4dbf-a897-9c0b2ef4bb6a" />
-    - <img width="1851" height="1051" alt="tablo2" src="https://github.com/user-attachments/assets/a4c02ece-84ff-49f4-bdcd-5c14e7dda974" />
-    - <img width="1853" height="1047" alt="tablo1" src="https://github.com/user-attachments/assets/4efa8ba2-1113-4ba1-b13d-e314792d7a5f" />
+     -
   </details>
  
 - **Sprint Review**: Sprint 2 sonunda hedeflenen 50 story point’in 37'si başarıyla tamamlanmıştır. Bu sprintteki ana hedef, temel bir multiplayer oyun döngüsü oluşturmak ve oynanabilir mini oyunları hayata geçirmekti. Bu hedefe büyük ölçüde ulaşılmıştır.
