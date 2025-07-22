@@ -3,7 +3,7 @@ Ekip Üyeleri:
 
 Proje ismi: Move It!
 Oyun Açıklaması: 
-Oyunun Hikayesi: Multi Madness adlı aşırı sıkılan bir Overlord varmış. Bu overlord o kadar sıkılmış ki bir yarışma düzenleme kararı almış. Ardından farklı evrenlerdeki ilgisini çeken oyuncuları zorla kendi arenasına sürüklemiş. Oyuncular hayatta kalmak ve biraz daha iyi kostümler için yarışmaya başlamışlar.
+Oyunun Hikayesi: Multi Madness adlı aşırı sıkılan bir Overlord varmış. Bu overlord o kadar sıkılmış ki bir yarışma düzenleme kararı almış. Ardından farklı evrenlerdeki ilgisini çeken oyuncuları zorla kendi arenasına sürüklemiş. Oyuncular hayatta kalmak ve kendi evrenlerine dönmek için yarışmaya başlamışlar.
 -Multi Madness(Sıkılmış bir kötü adam)
 
 Özellikler:
