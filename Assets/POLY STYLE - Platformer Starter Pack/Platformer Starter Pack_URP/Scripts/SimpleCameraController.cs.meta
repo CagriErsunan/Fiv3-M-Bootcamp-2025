@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: be76e5f14cfee674cb30b491fb72b09b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 284167
+  packageName: POLY STYLE - Platformer Starter Pack
+  packageVersion: 1.2
+  assetPath: Assets/POLY STYLE - Platformer Starter Pack/Platformer Starter Pack_URP/Scripts/SimpleCameraController.cs
+  uploadId: 661738

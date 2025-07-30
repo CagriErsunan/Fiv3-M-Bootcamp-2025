@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c8a5a4152480839448568ea9db10beff
+timeCreated: 1572459416
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Docs/About.txt
+  uploadId: 399960

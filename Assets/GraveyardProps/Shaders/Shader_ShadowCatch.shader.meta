@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b99e7490a0a3c684597acfe9acbe8ee0
+timeCreated: 1572455153
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Shaders/Shader_ShadowCatch.shader
+  uploadId: 399960

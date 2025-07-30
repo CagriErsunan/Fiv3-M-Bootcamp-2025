@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3405137044d98154690ed6b1bb8988a2, type: 3}
+  m_Name: Shoe1
+  m_EditorClassIdentifier: 
+  itemName: Shoe No1
+  itemType: 2
+  itemPrefab: {fileID: 6263881628255809937, guid: 0d22d246bfb501140a57caf5730af0d7, type: 3}

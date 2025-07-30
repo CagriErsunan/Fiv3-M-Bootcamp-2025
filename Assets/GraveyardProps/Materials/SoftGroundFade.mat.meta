@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f27a02e224122cb44bc717e6cfa607a4
+timeCreated: 1572452526
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Materials/SoftGroundFade.mat
+  uploadId: 399960

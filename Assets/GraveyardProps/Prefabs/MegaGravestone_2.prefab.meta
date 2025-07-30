@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7691546044b532d4db33a4d41c154c37
+timeCreated: 1572958797
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/MegaGravestone_2.prefab
+  uploadId: 399960

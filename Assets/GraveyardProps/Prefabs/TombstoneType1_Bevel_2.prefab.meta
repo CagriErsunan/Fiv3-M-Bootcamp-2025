@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fb8eb9e307093c64a929f9b888366d64
+timeCreated: 1572958821
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/TombstoneType1_Bevel_2.prefab
+  uploadId: 399960

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 659c81b20c121724a9c7d7228485cb59
+timeCreated: 1572958761
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/GraveType1_VeryDamaged_2.prefab
+  uploadId: 399960
