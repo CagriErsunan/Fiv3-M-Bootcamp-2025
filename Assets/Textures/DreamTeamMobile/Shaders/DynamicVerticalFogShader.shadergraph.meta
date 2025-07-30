@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8936be0d03302704c9f3680a179e8f00
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189939
+  packageName: Dynamic Vertical Fog
+  packageVersion: 1.1
+  assetPath: Assets/DreamTeamMobile/Shaders/DynamicVerticalFogShader.shadergraph
+  uploadId: 442650
