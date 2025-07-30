@@ -10358,6 +10358,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7299189146855182232, guid: c3067c52808af9941a1a761f4b2b2c01, type: 3}
+      propertyPath: 'NetworkConfig.Prefabs.NetworkPrefabsLists.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b60e3faf9bfb75742a416a700fc4cc61, type: 2}
+    - target: {fileID: 7299189146855182232, guid: c3067c52808af9941a1a761f4b2b2c01, type: 3}
       propertyPath: 'NetworkConfig.Prefabs.NetworkPrefabsLists.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 7e1ac54fa9db22e43a83d039dcd48d69, type: 2}

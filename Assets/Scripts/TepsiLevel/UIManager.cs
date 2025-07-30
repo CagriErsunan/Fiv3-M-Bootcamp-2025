@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEngine.UI; // UI elementleri için
 using TMPro; // TextMeshPro kullanıyorsanız
 
-public class UIManager : MonoBehaviour
+public class UIManagerTepsi : MonoBehaviour
 {
     // Singleton: Diğer script'lerin bu UIManager'a kolayca erişmesini sağlar.
-    public static UIManager Instance { get; private set; }
+    public static UIManagerTepsi InstanceUI { get; private set; }
 
     [Header("Puan Ekranı Elementleri")]
     public GameObject scoreScreenPanel; // Inspector'dan sürükleyeceğiniz panel
@@ -17,22 +17,22 @@ public class UIManager : MonoBehaviour
     void Awake()
     {
         // Singleton'ı ayarla
-        if (Instance != null && Instance != this)
+        if (InstanceUI != null && InstanceUI != this)
         {
             Destroy(gameObject);
         }
         else
         {
-            Instance = this;
+            InstanceUI = this;
         }
     }
 
     void Update()
 {
-    if (GameManager.Instance != null && timerText != null)
+    if (GameManagerTepsi.InstanceUI != null && timerText != null)
     {
         // GameManager'daki güncel zamanı al ve ekrana yazdır.
-        timerText.text = "Kalan Süre: " + Mathf.Ceil(GameManager.Instance.roundTimer.Value).ToString();
+        timerText.text = "Kalan Süre: " + Mathf.Ceil(GameManagerTepsi.InstanceUI.roundTimer.Value).ToString();
     }
 }
 

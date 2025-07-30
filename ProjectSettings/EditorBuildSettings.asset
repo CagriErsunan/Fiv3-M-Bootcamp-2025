@@ -6,14 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 75ec43e597fde65409d92ea273d01d7e
+    path: Assets/Scenes/IntroScene.unity
+    guid: 979d888d72611544bb658a04c655f896
+  - enabled: 1
+    path: Assets/Scenes/LobbyScene.unity
+    guid: 4ec8dc2978553424baaca644e9e2c04e
+  - enabled: 1
+    path: Assets/Scenes/GameScene1.unity
+    guid: db52895b9ed3a74478fbb3519252074f
   - enabled: 1
     path: Assets/Scenes/level_cambaz_tepsisi.unity
     guid: 6bfd90341eb7a5e4aa4eb313484a55ab
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/GameScene2.unity
+    guid: 2e360d6f93770f543af9ea98ff8c44f0
+  - enabled: 1
+    path: Assets/Scenes/GameScene3.unity
+    guid: fdc55f7cafb97da42b3d90b80a783b24
+  - enabled: 1
+    path: Assets/Scenes/GameScene5_BossArena.unity
+    guid: 2c01bb0fe0a466540bceeeb08d6b00d1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -3,9 +3,9 @@ using Unity.Netcode;
 using UnityEngine;
 using Unity.Collections; // Add this for FixedString
 
-public class GameManager : NetworkBehaviour
+public class GameManagerTepsi : NetworkBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManagerTepsi InstanceUI { get; private set; }
     public NetworkVariable<float> roundTimer = new NetworkVariable<float>(70f);
 
     // Use FixedString128Bytes instead of string
@@ -21,13 +21,13 @@ public class GameManager : NetworkBehaviour
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (InstanceUI != null && InstanceUI != this)
         {
             Destroy(gameObject);
         }
         else
         {
-            Instance = this;
+            InstanceUI = this;
         }
     }
 
@@ -98,9 +98,9 @@ public class GameManager : NetworkBehaviour
     {
         Debug.Log($"TUR SONU: {roundEndMessage.Value}");
 
-        if (UIManager.Instance != null)
+        if (UIManagerTepsi.InstanceUI != null)
         {
-            UIManager.Instance.ShowScoreScreen(
+            UIManagerTepsi.InstanceUI.ShowScoreScreen(
                 roundEndMessage.Value.ToString(),
                 scoreText.Value.ToString()
             );

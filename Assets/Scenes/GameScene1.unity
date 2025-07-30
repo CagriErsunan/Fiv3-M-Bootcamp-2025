@@ -4625,7 +4625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  nextSceneName: GameScene3
+  nextSceneName: level_cambaz_tepsisi
   roundDuration: 20
   timerText: {fileID: 1787294754}
   winnerText: {fileID: 2000588926}

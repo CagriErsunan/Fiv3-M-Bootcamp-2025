@@ -17,7 +17,7 @@ public class PlayerGroundCollision : NetworkBehaviour
         {
             isEliminated = true;
 
-            GameManager.Instance.PlayerDied(OwnerClientId);
+            GameManagerTepsi.InstanceUI.PlayerDied(OwnerClientId);
 
             SetSpectatorModeClientRpc();
         }
