@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b9c8f245e9bc93b4c9377fe5b6d4f0a3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189939
+  packageName: Dynamic Vertical Fog
+  packageVersion: 1.1
+  assetPath: Assets/DreamTeamMobile/Materials/DynamicVerticalFogMaterial.mat
+  uploadId: 442650
