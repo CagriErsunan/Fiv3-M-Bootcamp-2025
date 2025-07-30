@@ -3894,7 +3894,7 @@ MonoBehaviour:
     PlayerPrefab: {fileID: 5853015980869585912, guid: 8a4e0eb4492b071428a5a43b07b58974, type: 3}
     Prefabs:
       NetworkPrefabsLists:
-      - {fileID: 11400000, guid: b60e3faf9bfb75742a416a700fc4cc61, type: 2}
+      - {fileID: 11400000, guid: 4150c529ec3a9aa45bf2bdb8d8ccb7fc, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -4243,7 +4243,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 60344389}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.5
+  m_Size: 0.99830675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
