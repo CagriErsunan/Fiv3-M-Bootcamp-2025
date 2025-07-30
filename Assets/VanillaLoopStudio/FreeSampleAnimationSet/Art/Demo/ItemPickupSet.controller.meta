@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b606b4da608407f489e32336dafe2247
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 321560
+  packageName: Free Sample Animation Set
+  packageVersion: 1.0
+  assetPath: Assets/VanillaLoopStudio/FreeSampleAnimationSet/Art/Demo/ItemPickupSet.controller
+  uploadId: 760734

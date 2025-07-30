@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7cb4eaaf2bdb79b4cadcaf3a713acfa2
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 134110
+  packageName: Low Poly Graveyard
+  packageVersion: 1.0
+  assetPath: Assets/Low Poly Graveyard/Materials/vertexcolorsstandard.shader
+  uploadId: 309139

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ea287462a7f1e594cbb262a696262cdb
+timeCreated: 1572959272
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/SkySphereDome.prefab
+  uploadId: 399960

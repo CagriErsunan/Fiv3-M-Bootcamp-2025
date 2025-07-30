@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 243d90507a7e2b241add205af8657eb3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Scenes/Demo_Graveyard_Profiles/Main Camera Profile.asset
+  uploadId: 399960

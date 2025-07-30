@@ -1,0 +1,8 @@
+Thanks for buying this little pack, we hope to be adding more props as time goes by. Feel free to request props for this pack me@robertramsay.co.uk
+
+It currently includes a mesh for the sky, fog particle effect, shadow catcher shader (may be tempremental but just really for effect as the sky dome is set to not recieve shadows)
+
+Very simple rotation script added for the skydone, directional light is childed to follow the moon.
+
+
+Hope you enjoy this pack!

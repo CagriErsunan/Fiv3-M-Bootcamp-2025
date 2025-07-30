@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3405137044d98154690ed6b1bb8988a2, type: 3}
+  m_Name: Glasses1 3
+  m_EditorClassIdentifier: 
+  itemName: Glasses No4
+  itemType: 0
+  itemPrefab: {fileID: 4794826820725128956, guid: 84a05d23386a1854fb4e65a59fbdfe56, type: 3}

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 9f31e76f1d0c7a542a91286d109e8fa9
+timeCreated: 1572456265
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Scripts/rotate.cs
+  uploadId: 399960
