@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ae3370fdefd32894f8c0cee2f1a072ff
+timeCreated: 1572456127
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Shaders/Shader_LightAtten.shader
+  uploadId: 399960

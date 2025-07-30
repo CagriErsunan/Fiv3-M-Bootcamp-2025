@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6c923e622fdfafa42b06425421702e07
+timeCreated: 1572958802
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/SummoningStoneDetailed.prefab
+  uploadId: 399960

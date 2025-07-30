@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a8af79bf181c4af46b04dbdd5b210025
+timeCreated: 1572453576
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Materials/NightSky_SpookyMoon.mat
+  uploadId: 399960

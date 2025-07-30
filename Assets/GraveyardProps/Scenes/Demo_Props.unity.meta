@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5fc50ea2eff7c7e4690a8fff7dd267c1
+timeCreated: 1572448263
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Scenes/Demo_Props.unity
+  uploadId: 399960

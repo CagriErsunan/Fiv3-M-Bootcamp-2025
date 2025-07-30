@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 04716dbf9f6c9664bb8a66b262195909
+timeCreated: 1572457911
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Materials/ParticleMist.mat
+  uploadId: 399960

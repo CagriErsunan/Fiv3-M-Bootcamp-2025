@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f1e44444c84987542bd5cbb4469b373b
+timeCreated: 1572958829
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/TombstoneType2_Plain_2.prefab
+  uploadId: 399960

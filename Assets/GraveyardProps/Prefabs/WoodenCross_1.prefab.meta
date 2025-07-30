@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cacc7e4516cb22c4a9c332475f8470ac
+timeCreated: 1572958833
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/WoodenCross_1.prefab
+  uploadId: 399960

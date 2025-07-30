@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 67c5cf92b44e01a45933dfc88ed6d6ca
+timeCreated: 1572457397
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/ParticleFX/PFX_GroundMist.prefab
+  uploadId: 399960

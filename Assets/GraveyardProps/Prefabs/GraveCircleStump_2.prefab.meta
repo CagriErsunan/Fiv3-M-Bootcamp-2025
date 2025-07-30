@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 54b93a659cabcb14780100955513aa03
+timeCreated: 1572958751
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/GraveCircleStump_2.prefab
+  uploadId: 399960

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 63e1976b906dbf24b9ae9d9335ef99a5
+timeCreated: 1572958735
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 156860
+  packageName: Spooky Graveyard Pack
+  packageVersion: 1.0
+  assetPath: Assets/GraveyardProps/Prefabs/CoffinTexture_2.prefab
+  uploadId: 399960
