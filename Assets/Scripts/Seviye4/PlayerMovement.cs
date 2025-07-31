@@ -38,14 +38,14 @@ public class PlayerMovement : NetworkBehaviour
         float timeout = 3f;
         float timer = 0f;
 
-        while (GameManager.Instance == null && timer < timeout)
+        while (GameManager_Sm.Instance == null && timer < timeout)
         {
             Debug.Log("[PlayerMovement] Waiting for GameManager instance...");
             yield return new WaitForSeconds(0.2f);
             timer += 0.2f;
         }
 
-        if (GameManager.Instance != null)
+        if (GameManager_Sm.Instance != null)
         {
             Debug.Log("[PlayerMovement] GameManager found. Notifying elimination.");
             NotifyEliminatedServerRpc(playerId);
@@ -65,10 +65,10 @@ public class PlayerMovement : NetworkBehaviour
             return;
         }
 
-        if (GameManager.Instance != null)
+        if (GameManager_Sm.Instance != null)
         {
             Debug.Log($"[PlayerMovement] NotifyEliminatedServerRpc called for playerId {playerId}");
-            GameManager.Instance.NotifyPlayerEliminatedServerRpc(playerId);
+            GameManager_Sm.Instance.NotifyPlayerEliminatedServerRpc(playerId);
         }
         else
         {
