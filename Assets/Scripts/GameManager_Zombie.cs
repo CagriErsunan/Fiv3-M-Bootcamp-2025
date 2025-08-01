@@ -182,20 +182,36 @@ public class GameManager_Zombie : NetworkBehaviour
     private void TallyVotes()
     {
         votingEnded.Value = true;
-        Debug.Log($"SERVER: Voting has ended. Yes: {yesVotes.Value}, No: {noVotes.Value}");
 
-        if (yesVotes.Value >= noVotes.Value)
+        // --- THE NEW LOGIC ---
+
+        // 1. Increment the round counter.
+        GameData.CurrentRound++;
+        Debug.Log($"SERVER: Round {GameData.CurrentRound} has ended.");
+
+        // 2. Check if the game is over.
+        if (GameData.CurrentRound >= GameData.RoundsToWin)
         {
-            Debug.Log($"SERVER: Vote PASSED! Loading {nextSceneName}.");
-            // Use the variable to load the next scene
-            NetworkManager.Singleton.SceneManager.LoadScene(nextSceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
+            // --- GAME OVER ---
+            Debug.Log("SERVER: Final round reached! Loading End Scene.");
+            // Directly load our End Scene (GameScene2).
+            NetworkManager.Singleton.SceneManager.LoadScene("GameScene2", LoadSceneMode.Single);
         }
         else
         {
-            Debug.Log("SERVER: Vote FAILED! Reloading current scene for another round.");
-            // Dynamically get the current scene name to reload it
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            NetworkManager.Singleton.SceneManager.LoadScene(currentSceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
+            // --- GAME CONTINUES ---
+            // If the game is not over, run the normal voting logic.
+            if (yesVotes.Value >= noVotes.Value)
+            {
+                Debug.Log($"SERVER: Vote PASSED! Loading {nextSceneName}.");
+                NetworkManager.Singleton.SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
+            }
+            else
+            {
+                Debug.Log("SERVER: Vote FAILED! Reloading current scene.");
+                string currentSceneName = SceneManager.GetActiveScene().name;
+                NetworkManager.Singleton.SceneManager.LoadScene(currentSceneName, LoadSceneMode.Single);
+            }
         }
     }
 }
