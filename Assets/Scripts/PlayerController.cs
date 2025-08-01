@@ -849,7 +849,26 @@ public class PlayerController : NetworkBehaviour
         // to ensure a clean teleport.
         StartCoroutine(TeleportAndReenable(spawnPosition, spawnRotation));
     }
+    public void TeleportPlayer(Vector3 position, Quaternion rotation)
+    {
+        // A quick check to ensure only the server can issue this command.
+        if (!IsServer) return;
 
+        // The server calls a ClientRpc, sending the target position to the one client who owns this player object.
+        TeleportClientRpc(position, rotation, new ClientRpcParams
+        {
+            Send = new ClientRpcSendParams { TargetClientIds = new[] { OwnerClientId } }
+        });
+    }
+    [ClientRpc]
+    private void TeleportClientRpc(Vector3 position, Quaternion rotation, ClientRpcParams rpcParams = default)
+    {
+        // This code now runs on the correct client's machine.
+        // We don't need an IsOwner check here because the ClientRpcParams already targeted us specifically.
+
+        // We use the same reliable coroutine we used for respawning to handle the physics.
+        StartCoroutine(TeleportAndReenable(position, rotation));
+    }
     private System.Collections.IEnumerator TeleportAndReenable(Vector3 spawnPosition, Quaternion spawnRotation)
     {
         // Temporarily disable physics simulation to prevent weirdness
