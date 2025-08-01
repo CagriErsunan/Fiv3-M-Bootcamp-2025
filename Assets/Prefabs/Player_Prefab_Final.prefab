@@ -12541,6 +12541,10 @@ MonoBehaviour:
     m_InternalValue: 0
   Role:
     m_InternalValue: 0
+  isEliminated:
+    m_InternalValue: 0
+  playerCamera: {fileID: 826624585173652251, guid: 22eafaa18533aa34d8d6dc7a8c94ac53, type: 3}
+  spectatorCamera: {fileID: 5401694468282215303, guid: 2f99d4b32c848fd4fa75cb0363f49ca4, type: 3}
   cosmeticDatabase: {fileID: 11400000, guid: 72a7ef37d513eb847a46f277491d51f8, type: 2}
 --- !u!114 &1959498554980922930
 MonoBehaviour:
