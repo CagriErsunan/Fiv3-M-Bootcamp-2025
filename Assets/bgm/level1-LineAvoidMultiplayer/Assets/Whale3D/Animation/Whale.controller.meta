@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 46850ad969233fd4695f6ebd6e6954b5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 197919
+  packageName: Cartoon Whale low poly
+  packageVersion: 1.0
+  assetPath: Assets/Whale3D/Animation/Whale.controller
+  uploadId: 440162

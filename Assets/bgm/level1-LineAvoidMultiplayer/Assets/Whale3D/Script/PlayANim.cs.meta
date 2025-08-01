@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: aded60d84cad6dd48a14dbd058b913a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 197919
+  packageName: Cartoon Whale low poly
+  packageVersion: 1.0
+  assetPath: Assets/Whale3D/Script/PlayANim.cs
+  uploadId: 440162

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 83ad0c69900794347859e43bfbfa9e05
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 197919
+  packageName: Cartoon Whale low poly
+  packageVersion: 1.0
+  assetPath: Assets/Whale3D/Script/BaseMesh.cs
+  uploadId: 440162

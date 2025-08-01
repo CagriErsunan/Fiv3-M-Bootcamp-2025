@@ -1,0 +1,45 @@
+	
+--------------Low poly Whale 3D----------------------------
+
+Low poly 3d model and Animation of Whale perfectly fit for any kind of your game.
+
+Technical Details:-
+
+		- Vertex count : 224(Low), 898(High)
+		- Triangle count : 444(Low), 1792(High)
+		- Used Material(s) : Unity standard Material(Albedo, Metalic, Normal)
+		- Animation Clips : 4
+
+Features:-
+
+	- 4 simple Animations
+	- Two meshes(Low poly and High poly)
+	- Unwrapped
+	- 1 Skin Included
+	- Easy to change colors
+	- 2 Meshes included in this package
+	- Demo scenes included
+	
+Folder details:-
+
+	Materials : Where the materials for the model located.
+	
+	Meshes : Contain FBX format of the 3d model.
+	
+	Textures : Contains Textures, that are in (.PNG) file format
+	
+	(Other folders - Prefabs, Scenes)
+
+How to use:-
+	
+	Simply drag and drop the "Whale 3D" prefab to your scene and use it.
+	(Prefab(s) located under 
+	Asset > Whale 3D > Prefabs).
+
+..................................................................................
+
+About Us : We are "SR Studios Kerala", Game developing company located in Alappuzha, Kerala, India
+
+Contact : srstudioskerala@gmail.com
+
+................Thanks for downloading this package................................
