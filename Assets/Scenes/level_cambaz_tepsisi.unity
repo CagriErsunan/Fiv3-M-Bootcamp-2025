@@ -5849,9 +5849,10 @@ GameObject:
   - component: {fileID: 1849213020}
   - component: {fileID: 1849213019}
   - component: {fileID: 1849213018}
-  - component: {fileID: 1849213017}
   - component: {fileID: 1849213021}
   - component: {fileID: 1849213022}
+  - component: {fileID: 1849213023}
+  - component: {fileID: 1849213024}
   m_Layer: 0
   m_Name: Zemin
   m_TagString: Zemin
@@ -5859,28 +5860,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1849213017
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849213015}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1849213018
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5988,6 +5967,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1849213023
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849213015}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1849213024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849213015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c67a4b9359fc68e4c948ecdcadb48f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2007947323
 GameObject:
   m_ObjectHideFlags: 0
@@ -6048,6 +6060,10 @@ PrefabInstance:
     - target: {fileID: 826624585173652251, guid: 22eafaa18533aa34d8d6dc7a8c94ac53, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 826624585173652251, guid: 22eafaa18533aa34d8d6dc7a8c94ac53, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2199724940264010077, guid: 22eafaa18533aa34d8d6dc7a8c94ac53, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6154,6 +6170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpectateCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 5401694468282215303, guid: 2f99d4b32c848fd4fa75cb0363f49ca4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6236,6 +6256,6 @@ SceneRoots:
   - {fileID: 1455342495}
   - {fileID: 104692100}
   - {fileID: 722336523}
-  - {fileID: 1736114433113464960}
   - {fileID: 721202771}
   - {fileID: 7598072394615785269}
+  - {fileID: 1736114433113464960}

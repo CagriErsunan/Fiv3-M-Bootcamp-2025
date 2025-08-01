@@ -61,7 +61,7 @@ public class GameManager_Tepsi : NetworkBehaviour
         foreach (var client in NetworkManager.Singleton.ConnectedClientsList)
         {
             var player = client.PlayerObject.GetComponent<PlayerController>();
-            if (player != null && !player.isEliminated.Value)
+            if (player != null && !player.isEliminatedTepsi.Value)
             {
                 player.PlayerScore.Value += 1;
                 survivors.Add(client.ClientId);

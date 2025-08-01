@@ -79,10 +79,10 @@ public class PlayerController : NetworkBehaviour
     private bool hasWonThisRound = false;
     ///////
     [Header("Pushing")]
-    public NetworkVariable<bool> isEliminated = new NetworkVariable<bool>(false);
+    public NetworkVariable<bool> isEliminatedTepsi = new NetworkVariable<bool>(false);
     private Collider col;
-    [SerializeField] private Camera playerCamera;
-    [SerializeField] private Camera spectatorCamera;
+    [SerializeField] private GameObject playerCamera;
+    [SerializeField] private GameObject spectatorCamera;
     ///////
     [SerializeField] private CosmeticDatabase cosmeticDatabase;
     [System.Obsolete]
@@ -149,6 +149,13 @@ public class PlayerController : NetworkBehaviour
         Role.OnValueChanged += HandleRoleForSkillUI;
         // Call it once to set the initial state.
         // HandleRoleForSkillUI(PlayerRole.Survivor, Role.Value);
+
+        //////////
+        if (playerCamera != null)
+            playerCamera.SetActive(true);
+
+        if (spectatorCamera != null)
+            spectatorCamera.SetActive(false);
     }
     private void HandleRoleForSkillUI(PlayerRole previousRole, PlayerRole newRole)
     {
@@ -1222,12 +1229,13 @@ public class PlayerController : NetworkBehaviour
     {
         if (!IsServer) return;
 
-        if (!isEliminated.Value)
+        if (!isEliminatedTepsi.Value)
         {
-            isEliminated.Value = true;
+            Debug.Log($"Player {OwnerClientId} has been eliminated and is now a spectator.");
+            isEliminatedTepsi.Value = true;
             EnterSpectatorModeClientRpc();
         }
-        Debug.Log($"Player {OwnerClientId} has been eliminated and is now a spectator.");
+        
     }
 
     [ClientRpc]
@@ -1250,11 +1258,12 @@ public class PlayerController : NetworkBehaviour
         // Switch to spectator camera
         if (IsOwner)
         {
-            if (playerCamera != null) playerCamera.gameObject.SetActive(false);
-            if (spectatorCamera != null) spectatorCamera.gameObject.SetActive(true);
+            Debug.Log($"Player {OwnerClientId} entered spectator mode.");
+            if (playerCamera != null) playerCamera.SetActive(false);
+            if (spectatorCamera != null) spectatorCamera.SetActive(true);
         }
 
-        Debug.Log($"Player {OwnerClientId} entered spectator mode.");
+        
     }
 
     void Awake()

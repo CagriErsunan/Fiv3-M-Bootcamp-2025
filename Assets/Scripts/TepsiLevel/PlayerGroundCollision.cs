@@ -1,24 +1,22 @@
 using UnityEngine;
 using Unity.Netcode;
-using UnityEngine.SceneManagement;
 
-public class PlayerGroundCollision : NetworkBehaviour
+public class GroundEliminator : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!IsServer) return; // Sadece server bu kontrolü yapar
+        // Oyuncu tag kontrolü
+        if (!other.CompareTag("Player")) return;
 
-        if (SceneManager.GetActiveScene().name != "level_cambaz_tepsisi")
-            return;
-            
-        if (collision.gameObject.CompareTag("Zemin"))
+        // Oyuncunun Network tarafı sadece server'da işlenmeli
+        if (!NetworkManager.Singleton.IsServer) return;
+
+        // PlayerController var mı kontrol et
+        var controller = other.GetComponent<PlayerController>();
+        if (controller != null && !controller.isEliminatedTepsi.Value)
         {
-            PlayerController controller = GetComponent<PlayerController>();
-            if (controller != null && !controller.isEliminated.Value)
-            {
-                controller.Eliminate();
-                Debug.Log($"Player {OwnerClientId} eliminated by touching ground.");
-            }
+            controller.Eliminate();
+            Debug.Log($"Player {controller.OwnerClientId} eliminated by ZEMIN trigger.");
         }
     }
 }
