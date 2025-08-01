@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager_Sm : NetworkBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager_Sm Instance;
 
     [Header("Scene Management")]
     [SerializeField] private string nextSceneName;
@@ -214,14 +214,14 @@ public class GameManager_Sm : NetworkBehaviour
     private void ShowWinnerClientRpc(ulong winnerId)
     {
         bool isWinner = NetworkManager.Singleton.LocalClientId == winnerId;
-        UIManager.Instance?.ShowGameOver(isWinner);
+      //  UIManager.Instance?.ShowGameOver(isWinner);
     }
 
     [ClientRpc]
     private void ShowGameOverClientRpc(ulong eliminatedPlayerId)
     {
         bool isEliminated = NetworkManager.Singleton.LocalClientId == eliminatedPlayerId;
-        UIManager.Instance?.ShowGameOver(!isEliminated);
+       // UIManager.Instance?.ShowGameOver(!isEliminated);
     }
 
     private void PrintAlivePlayers()

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerController : MonoBehaviour
+public class PlayerController1 : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
