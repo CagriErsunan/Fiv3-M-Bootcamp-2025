@@ -29,7 +29,7 @@ namespace Kart.Items
 
                     // 2️⃣ Yan kaydırma ve hafif zıplatma
                     Vector3 slipDir = (other.transform.right + Vector3.up * 0.3f).normalized;
-                    rb.AddForce(slipDir * 300f, ForceMode.VelocityChange);
+                    rb.AddForce(slipDir * 10f, ForceMode.VelocityChange);
                 }
 
                 Destroy(gameObject); // Kullanıldı
