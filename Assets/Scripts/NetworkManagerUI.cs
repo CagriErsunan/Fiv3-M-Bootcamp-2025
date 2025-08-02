@@ -5,7 +5,7 @@ using TMPro;
 public class NetworkManagerUI : MonoBehaviour
 {
     [SerializeField] private Button hostButton;
-    [SerializeField] private Button clientButton;
+    [SerializeField] private Button clientButton; // join tuþu
     [SerializeField] private TMP_InputField joinCodeInput;
     [SerializeField] private GameObject buttonsPanel;
     [SerializeField] private Button exitButton;
@@ -23,28 +23,38 @@ public class NetworkManagerUI : MonoBehaviour
         if (!string.IsNullOrEmpty(joinCode))
         {
             if (joinCodeInput != null)
-                joinCodeInput.text = joinCode;
+                joinCodeInput.text = joinCode; // JoinCode UI'da göster
             buttonsPanel.SetActive(false);
         }
     }
 
     private async void OnClientClicked()
     {
-        string code = joinCodeInput.text.Trim();
-        if (string.IsNullOrEmpty(code))
+        if (joinCodeInput == null)
         {
-            Debug.LogWarning("Join code is empty!");
+            Debug.LogError("JoinCodeInput is not assigned in Inspector!");
             return;
         }
 
+        string code = joinCodeInput.text.Trim().ToUpper();
+        if (string.IsNullOrEmpty(code))
+        {
+            Debug.LogWarning("Join code input is empty!");
+            return;
+        }
+
+        clientButton.interactable = false; // spam engelle
         bool success = await RelayManager.Instance.JoinRelay(code);
+        clientButton.interactable = true;
+
         if (success)
         {
             buttonsPanel.SetActive(false);
+            Debug.Log("[RelayUI] Successfully joined Relay!");
         }
         else
         {
-            Debug.LogError("Failed to join relay with this code!");
+            Debug.LogError("[RelayUI] Join failed! Check console for Relay logs.");
         }
     }
 

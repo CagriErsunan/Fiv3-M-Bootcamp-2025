@@ -1,59 +1,69 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Threading.Tasks;
 
 public class RelayUIManager : MonoBehaviour
 {
     [Header("UI References")]
-    public Button hostButton;
-    public Button joinButton;
-    public Button exitButton;
-
-    public GameObject joinCodePanel;
-    public TMP_Text hostJoinCodeText;
-    public TMP_InputField joinCodeInput;
-    public Button joinConfirmButton;
+    [SerializeField] private TMP_InputField joinCodeInput;   // Client girecek
+    [SerializeField] private TMP_Text joinCodeText;          // Host gÃ¶sterecek
+    [SerializeField] private Button startHostButton;
+    [SerializeField] private Button joinClientButton;
+    [SerializeField] private Button exitButton;
 
     private void Start()
     {
-        hostButton.onClick.AddListener(OnHostClicked);
-        joinButton.onClick.AddListener(OnJoinPanelOpened);
-        joinConfirmButton.onClick.AddListener(OnJoinClicked);
-        exitButton.onClick.AddListener(() => Application.Quit());
+        startHostButton.onClick.AddListener(OnHostClicked);
+        joinClientButton.onClick.AddListener(OnJoinClicked);
+        exitButton.onClick.AddListener(OnExitGameClicked);
 
-        joinCodePanel.SetActive(false);
+        joinCodeText.text = "";
+        joinCodeInput.text = "";
     }
 
+    // Host: Relay oluÅŸtur ve join code'u gÃ¶ster
     private async void OnHostClicked()
     {
-        string joinCode = await RelayManager.Instance.CreateRelay(4); // max 4 oyuncu
+        Debug.Log("[RelayUI] Host button clicked!");
+        string joinCode = await RelayManager.Instance.CreateRelay();
+
         if (!string.IsNullOrEmpty(joinCode))
         {
-            hostJoinCodeText.text = $"Join Code: {joinCode}";
-            joinCodePanel.SetActive(true); // Host join code’u görecek
-        }
-    }
-
-    private void OnJoinPanelOpened()
-    {
-        joinCodePanel.SetActive(true); // Client join paneli açýlýr
-        hostJoinCodeText.text = "Enter Join Code Below";
-    }
-
-    private async void OnJoinClicked()
-    {
-        string code = joinCodeInput.text.Trim().ToUpper();
-        if (string.IsNullOrEmpty(code)) return;
-
-        bool success = await RelayManager.Instance.JoinRelay(code);
-        if (!success)
-        {
-            Debug.LogError("Join failed! Wrong code or Relay not active.");
+            joinCodeText.text = "Join Code: " + joinCode;
+            Debug.Log("[RelayUI] Relay created. Join Code: " + joinCode);
         }
         else
         {
-            joinCodePanel.SetActive(false);
+            Debug.LogError("[RelayUI] Failed to create Relay!");
         }
+    }
+
+    // Client: Join code ile baÄŸlan
+    private async void OnJoinClicked()
+    {
+        string code = joinCodeInput.text.Trim().ToUpper();
+        if (string.IsNullOrEmpty(code))
+        {
+            Debug.LogWarning("[RelayUI] Join code is empty!");
+            return;
+        }
+
+        Debug.Log("[RelayUI] Trying to join Relay with code: " + code);
+        bool success = await RelayManager.Instance.JoinRelay(code);
+
+        if (success)
+            Debug.Log("[RelayUI] Successfully joined Relay!");
+        else
+            Debug.LogError("[RelayUI] Join failed!");
+    }
+
+    private void OnExitGameClicked()
+    {
+        Debug.Log("[RelayUI] Exit button clicked. Quitting...");
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
