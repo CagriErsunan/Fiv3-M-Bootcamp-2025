@@ -6,9 +6,6 @@ public class PlatformAngleController : MonoBehaviour
     public float maxTiltAngle = 45f;
 
     [Header("Friction Settings")]
-    public float normalFriction = 0.6f;
-    public float slipperyFriction = 0.05f;
-    public float slipStartAngle = 35f;
 
     private Rigidbody rb;
     private Collider col;

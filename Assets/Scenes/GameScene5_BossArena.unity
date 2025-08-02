@@ -1541,8 +1541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  timePerTier: 20
-  heatmapAreaSize: {x: 20, y: 20}
+  timePerTier: 15
+  heatmapAreaSize: {x: 35, y: 35}
   heatmapResolution: 10
   nextSceneName: GameScene1
   votingPanel: {fileID: 939823338}
