@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Move It!.sln"
+    "dotnet.defaultSolution": "Fiv3-M-Bootcamp-2025.sln"
 }
