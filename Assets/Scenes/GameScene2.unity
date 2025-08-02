@@ -588,8 +588,8 @@ MonoBehaviour:
   secondPlacePodium: {fileID: 787613154}
   thirdPlacePodium: {fileID: 962052523}
   otherPlayersArea: {fileID: 974279728}
-  resultsPanel: {fileID: 0}
-  resultsContainer: {fileID: 0}
+  resultsPanel: {fileID: 462234781}
+  resultsContainer: {fileID: 1713963362}
   resultEntryPrefab: {fileID: 7768619072580277386, guid: b4ee929025e7c5c4f9b04fb7f4a27ead, type: 3}
   firstPlaceSprite: {fileID: 21300000, guid: 38a92cc4860c7014985a793ab10851ba, type: 3}
   secondPlaceSprite: {fileID: 21300000, guid: 484c69b2f0c74764b91c7b3fea387e24, type: 3}
@@ -597,6 +597,11 @@ MonoBehaviour:
   confettiVFXPrefab: {fileID: 5700784828077083704, guid: ed962e35f7fa6f34f8d27aa6d19ea293, type: 3}
   confettiSpawnPoint: {fileID: 518301079}
   endMatchButtonsPanel: {fileID: 2088071141}
+--- !u!1 &462234781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1528365154420148015, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
+  m_PrefabInstance: {fileID: 1095929933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &515291071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +1987,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!224 &1713963362 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6803431841306132041, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
+  m_PrefabInstance: {fileID: 1095929933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1815968061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,7 +2056,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 265882f5e8b5d8b499569b0a6e6fb1b7, type: 2}
+  - {fileID: 2100000, guid: 0941d66262c41df4eb409149b2ecf49c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
