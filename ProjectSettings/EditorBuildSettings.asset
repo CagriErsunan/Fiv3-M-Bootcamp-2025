@@ -5,25 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IntroScene.unity
     guid: 979d888d72611544bb658a04c655f896
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LobbyScene.unity
     guid: 4ec8dc2978553424baaca644e9e2c04e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene1.unity
     guid: db52895b9ed3a74478fbb3519252074f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/level_cambaz_tepsisi.unity
     guid: 6bfd90341eb7a5e4aa4eb313484a55ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene2.unity
     guid: 2e360d6f93770f543af9ea98ff8c44f0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene3.unity
     guid: fdc55f7cafb97da42b3d90b80a783b24
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene5_BossArena.unity
     guid: 2c01bb0fe0a466540bceeeb08d6b00d1
   - enabled: 1
