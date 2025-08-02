@@ -21,10 +21,18 @@ public class NetworkManagerUI : MonoBehaviour
             buttonsPanel.SetActive(false);
         });
 
-        clientButton.onClick.AddListener(() => {
+        clientButton.onClick.AddListener(() =>
+        {
             Debug.Log("JOINING AS CLIENT...");
+
+            var transport = NetworkManager.Singleton.GetComponent<Unity.Netcode.Transports.UTP.UnityTransport>();
+
+            // IP adresi elle girilebilir veya bir input field'dan alınabilir
+            transport.ConnectionData.Address = "192.168.1.10"; // ← Host'un yerel IP'si
+            transport.ConnectionData.Port = 7777;              // default 7777 (istersen değiştirebilirsin)
+
             NetworkManager.Singleton.StartClient();
-            // After clicking, hide the buttons immediately.
+
             buttonsPanel.SetActive(false);
         });
         exitButton.onClick.AddListener(OnExitGameClicked);
