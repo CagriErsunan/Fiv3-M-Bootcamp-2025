@@ -1,48 +1,22 @@
-using Unity.Netcode;
-using Unity.Netcode.Components;
 using UnityEngine;
+using Unity.Netcode;
 
-[RequireComponent(typeof(NetworkObject))]
-public class PlayerGroundCollision : NetworkBehaviour
+public class GroundEliminator : MonoBehaviour
 {
-    [SerializeField] private string groundTag = "Zemin";
-
-    private bool isEliminated = false;
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!IsServer || isEliminated) return;
+        // Oyuncu tag kontrolü
+        if (!other.CompareTag("Player")) return;
 
-        if (collision.gameObject.CompareTag(groundTag))
+        // Oyuncunun Network tarafı sadece server'da işlenmeli
+        if (!NetworkManager.Singleton.IsServer) return;
+
+        // PlayerController var mı kontrol et
+        var controller = other.GetComponent<PlayerController>();
+        if (controller != null && !controller.isEliminatedTepsi.Value)
         {
-            isEliminated = true;
-
-            GameManagerTepsi.InstanceUI.PlayerDied(OwnerClientId);
-
-            SetSpectatorModeClientRpc();
+            controller.Eliminate();
+            Debug.Log($"Player {controller.OwnerClientId} eliminated by ZEMIN trigger.");
         }
-    }
-
-    [ClientRpc]
-    private void SetSpectatorModeClientRpc()
-    {
-        // 1. Görünmez yap
-        if (TryGetComponent(out MeshRenderer renderer))
-            renderer.enabled = false;
-
-        // 2. Çarpışmayı kapat
-        if (TryGetComponent(out Collider collider))
-            collider.enabled = false;
-
-        // 3. Hareket scriptini kapat
-        if (TryGetComponent(out TepsiCharacterController movement))
-            movement.enabled = false;
-
-        // 4. NetworkTransform'u durdur
-        if (TryGetComponent(out NetworkTransform netTransform))
-            netTransform.enabled = false;
-
-        // 5. KAMERA? Oyuncunun kamerası aktif kalsın (istersen cinematic kamera yapabiliriz)
-        Debug.Log("Oyuncu elendi ama sahneyi izlemeye devam ediyor.");
     }
 }

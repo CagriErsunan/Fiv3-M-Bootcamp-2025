@@ -13,11 +13,7 @@ public class GameManager_BossArena : NetworkBehaviour
 
     [Header("Difficulty Scaling")]
     [SerializeField] private float timePerTier = 15f;
-    [Header("AI Learning (Heatmap)")]
-    [Tooltip("The size of the arena to track. Should match your boss's arenaSize.")]
-    [SerializeField] private Vector2 heatmapAreaSize = new Vector2(20, 20);
-    [Tooltip("How many cells the grid has. 10x10 is a good start.")]
-    [SerializeField] private int heatmapResolution = 10;
+
     [Header("Scene Management")]
     [SerializeField] private string nextSceneName;
 
@@ -26,11 +22,9 @@ public class GameManager_BossArena : NetworkBehaviour
     [SerializeField] private TMPro.TMP_Text winnerText;
 
     // Server-side variables
-    private float heatmapSampleTimer = 0f;
-    private float heatmapSampleRate = 0.25f; // Sample 4 times per second
     private float tierTimer;
     private BossAIController boss;
-    private float[,] heatmap;
+
     // Networked variables for voting
     private NetworkVariable<int> network_difficultyTier = new NetworkVariable<int>(0);
     private NetworkVariable<int> yesVotes = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
@@ -50,7 +44,7 @@ public class GameManager_BossArena : NetworkBehaviour
             network_gameState.Value = GameState.RoundInProgress;
             network_difficultyTier.Value = 0;
             UpdateBossDifficulty(); // Set initial difficulty
-            InitializeHeatmap();
+
             votingEnded.Value = false;
             yesVotes.Value = 0;
             noVotes.Value = 0;
@@ -71,12 +65,7 @@ public class GameManager_BossArena : NetworkBehaviour
         if (winnerText != null) winnerText.gameObject.SetActive(false);
         if (votingPanel != null) votingPanel.SetActive(false);
     }
-    private void InitializeHeatmap()
-    {
-        Debug.Log("Server: Initializing AI learning heatmap.");
-        // Create a new 2D array with the specified resolution.
-        heatmap = new float[heatmapResolution, heatmapResolution];
-    }
+
     private void Update()
     {
         // The server's main loop. If not server or round is over, do nothing.
@@ -96,44 +85,6 @@ public class GameManager_BossArena : NetworkBehaviour
 
         // Handle checking for the win condition.
         CheckForWinCondition();
-        // --- NEW: AI LEARNING LOGIC ---
-        heatmapSampleTimer -= Time.deltaTime;
-        if (heatmapSampleTimer <= 0f)
-        {
-            heatmapSampleTimer = heatmapSampleRate;
-            UpdateHeatmap();
-        }
-    }
-    private void UpdateHeatmap()
-    {
-        // Loop through all connected players.
-        foreach (var client in NetworkManager.Singleton.ConnectedClients.Values)
-        {
-            // Make sure the player is valid and is not eliminated.
-            if (client.PlayerObject != null && !client.PlayerObject.GetComponent<PlayerController>().IsEliminated.Value)
-            {
-                // Get the player's position.
-                Vector3 playerPosition = client.PlayerObject.transform.position;
-
-                // --- Convert world position to grid coordinates ---
-                // Calculate how big each cell is.
-                float cellWidth = heatmapAreaSize.x / heatmapResolution;
-                float cellHeight = heatmapAreaSize.y / heatmapResolution;
-
-                // Convert the player's X/Z world position into an X/Y grid index.
-                // We add (heatmapAreaSize / 2) to shift the origin from the center to the corner.
-                int gridX = Mathf.FloorToInt((playerPosition.x + heatmapAreaSize.x / 2) / cellWidth);
-                int gridY = Mathf.FloorToInt((playerPosition.z + heatmapAreaSize.y / 2) / cellHeight);
-
-                // --- Add "heat" to the corresponding grid cell ---
-                // First, check if the calculated coordinates are valid (within the grid).
-                if (gridX >= 0 && gridX < heatmapResolution && gridY >= 0 && gridY < heatmapResolution)
-                {
-                    // If they are valid, increase the heat value for that cell.
-                    heatmap[gridX, gridY] += 1.0f; // Add 1 "heat point"
-                }
-            }
-        }
     }
 
     private void CheckForWinCondition()
@@ -156,48 +107,7 @@ public class GameManager_BossArena : NetworkBehaviour
             EndRound(livingPlayers);
         }
     }
-    public Vector3 GetHottestTargetPosition()
-    {
-        float maxHeat = 0f;
-        int bestX = 0;
-        int bestY = 0;
 
-        // Loop through every single cell in our heatmap grid.
-        for (int x = 0; x < heatmapResolution; x++)
-        {
-            for (int y = 0; y < heatmapResolution; y++)
-            {
-                // Is this cell's heat value greater than the hottest we've found so far?
-                if (heatmap[x, y] > maxHeat)
-                {
-                    // If yes, this is our new "hottest" spot.
-                    maxHeat = heatmap[x, y];
-                    bestX = x;
-                    bestY = y;
-                }
-            }
-        }
-
-        // --- "Cool down" the chosen spot ---
-        // To prevent the boss from always attacking the exact same spot,
-        // we'll reduce the heat of the chosen cell after we use it.
-        if (maxHeat > 0)
-        {
-            heatmap[bestX, bestY] /= 2; // Cut the heat in half
-        }
-
-
-        // --- Convert the winning grid coordinate back to a world position ---
-        float cellWidth = heatmapAreaSize.x / heatmapResolution;
-        float cellHeight = heatmapAreaSize.y / heatmapResolution;
-
-        // This is the reverse of the calculation we did in UpdateHeatmap.
-        float worldX = (bestX * cellWidth) - (heatmapAreaSize.x / 2) + (cellWidth / 2);
-        float worldZ = (bestY * cellHeight) - (heatmapAreaSize.y / 2) + (cellHeight / 2);
-
-        // Return the final world position for the attack.
-        return new Vector3(worldX, 0, worldZ);
-    }
     private void UpdateBossDifficulty()
     {
         if (boss != null)

@@ -7,11 +7,6 @@ public class DestroyOnTouch : MonoBehaviour
     {
         if (!NetworkManager.Singleton.IsServer) return;
 
-        if (other.CompareTag("Player"))
-        {
-            PlayerGroundCollision playerHealth = other.GetComponent<PlayerGroundCollision>();
-           // if (playerHealth != null) playerHealth.Die();
-        }
         else if (other.CompareTag("gulle"))
         {
             NetworkObject networkObject = other.GetComponent<NetworkObject>();
