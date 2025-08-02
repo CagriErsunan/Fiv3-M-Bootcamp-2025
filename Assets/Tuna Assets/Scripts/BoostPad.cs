@@ -1,23 +1,25 @@
+// Scripts/BoostPad.cs
 using UnityEngine;
+using Unity.Netcode;
 
-namespace Kart.Items
+namespace Kart
 {
-    public class BoostPad : MonoBehaviour
+    [RequireComponent(typeof(Collider))]
+    public class BoostPad : NetworkBehaviour
     {
-        public float boostForce = 20f; // ï¿½tme gï¿½cï¿½
-        public float boostDuration = 0.2f; // ï¿½tmenin ne kadar sï¿½receï¿½i
+        public float boostForce = 30f;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            // Sadece sunucu fizik uygular
+            if (!IsServer) return;
+
+            // Kart mý çarptý?
+            var rb = other.GetComponent<Rigidbody>();
+            if (rb != null)
             {
-                Rigidbody rb = other.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    // Arabayï¿½ ileri doï¿½ru hï¿½zlandï¿½r
-                    Vector3 boostDirection = other.transform.forward;
-                    rb.linearVelocity = boostDirection * boostForce;
-                }
+                Vector3 boostDirection = transform.forward;
+                rb.AddForce(boostDirection * boostForce, ForceMode.VelocityChange);
             }
         }
     }

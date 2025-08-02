@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/TepsiLevel/Cylinder.prefab.meta
 guid: 23b3a510c1791f44a8e425e1397982d3
 PrefabImporter:
+========
+guid: 8f586378b4e144a9851e7b34d9b748ee
+NativeFormatImporter:
+>>>>>>>> CanBranch3:Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

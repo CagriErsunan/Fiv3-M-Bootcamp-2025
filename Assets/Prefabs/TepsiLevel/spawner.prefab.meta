@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/TepsiLevel/spawner.prefab.meta
 guid: fde1ba113bd74ae44a1eb304ebc96392
 PrefabImporter:
+========
+guid: d699268bd975a0c43a7adbf0f554e8fb
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> CanBranch3:Assets/Tuna Assets/TutorialInfo.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
