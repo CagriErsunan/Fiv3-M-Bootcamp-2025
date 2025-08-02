@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3062729208
-  InScenePlacedSourceGlobalObjectIdHash: 0
+  GlobalObjectIdHash: 2736430881
+  InScenePlacedSourceGlobalObjectIdHash: 3062729208
   DeferredDespawnTick: 0
   Ownership: 1
   AlwaysReplicateAsRoot: 0
@@ -265,7 +265,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!1001 &2280982884351621104
 PrefabInstance:
@@ -297,11 +297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 762613739121508600, guid: 59b006c68cf0fce48a03c68eda35a194, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 762613739121508600, guid: 59b006c68cf0fce48a03c68eda35a194, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 762613739121508600, guid: 59b006c68cf0fce48a03c68eda35a194, type: 3}
       propertyPath: m_LocalRotation.w

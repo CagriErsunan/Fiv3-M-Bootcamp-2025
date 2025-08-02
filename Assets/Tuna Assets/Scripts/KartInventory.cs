@@ -5,30 +5,57 @@ namespace Kart.Items
 {
     public class KartInventory : MonoBehaviour
     {
+        [Header("Item Durumu")]
         public KartItemSO currentItem;
-        public event Action<KartItemSO> OnItemChanged; // UI'ye haber verir
+        public event Action<KartItemSO> OnItemChanged;
 
-        public void ReceiveItem(KartItemSO item)
+        [Header("Kullanım Ayarları")]
+        public float useCooldown = 0.3f; // Daha hızlı tepki için kısalttık
+        private float lastUseTime = -999f;
+
+        public bool HasItem => currentItem != null;
+
+        private void Update()
         {
-            if (currentItem == null)
+            // Oyuncu Space'e bastığında itemi kullan
+            if (HasItem && Input.GetKeyDown(KeyCode.Space))
             {
-                currentItem = item;
-                Debug.Log("Aldığın item: " + item.itemName);
-
-                OnItemChanged?.Invoke(currentItem); // UI'yi güncelle
+                UseItem();
             }
         }
 
+        /// <summary>
+        /// ItemBox'tan item alır
+        /// </summary>
+        public void ReceiveItem(KartItemSO item)
+        {
+            if (HasItem) return;
+
+            currentItem = item;
+            lastUseTime = Time.time; // yeni item için cooldown sıfırdan başlar
+            Debug.Log("Aldığın item: " + item.itemName);
+
+            OnItemChanged?.Invoke(currentItem); // UI güncelle
+        }
+
+        /// <summary>
+        /// Itemi kullanır ve envanteri boşaltır
+        /// </summary>
         public void UseItem()
         {
-            if (currentItem == null) return;
+            if (!HasItem) return;
 
-            // Item davranışını ScriptableObject'ten çalıştır
+            // Cooldown kontrolü
+            if (Time.time - lastUseTime < useCooldown) return;
+
+            // Item davranışını çalıştır
             currentItem.UseItem(gameObject);
 
-            // Item bitti
+            // Cooldown ve item reset
+            lastUseTime = Time.time;
             currentItem = null;
-            OnItemChanged?.Invoke(null); // UI temizlensin
+
+            OnItemChanged?.Invoke(null); // UI temizle
         }
     }
 }
