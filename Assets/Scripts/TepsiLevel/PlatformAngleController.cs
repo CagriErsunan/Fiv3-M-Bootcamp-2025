@@ -12,18 +12,11 @@ public class PlatformAngleController : MonoBehaviour
 
     private Rigidbody rb;
     private Collider col;
-    private PhysicsMaterial dynamicPhysicMaterial;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
-
-        // Runtime friction material
-        dynamicPhysicMaterial = new PhysicsMaterial("DynamicFrictionMaterial");
-        dynamicPhysicMaterial.frictionCombine = PhysicsMaterialCombine.Minimum;
-        dynamicPhysicMaterial.bounciness = 0f;
-        col.material = dynamicPhysicMaterial;
     }
 
     private void FixedUpdate()
@@ -31,7 +24,6 @@ public class PlatformAngleController : MonoBehaviour
         if (!IsServer()) return;
 
         ClampRotation();
-        AdjustFriction();
     }
 
     private void ClampRotation()
@@ -48,18 +40,6 @@ public class PlatformAngleController : MonoBehaviour
         rb.MoveRotation(clampedRot);
     }
 
-    private void AdjustFriction()
-    {
-        Vector3 angles = rb.rotation.eulerAngles;
-        float tiltMagnitude = Mathf.Max(Mathf.Abs(NormalizeAngle(angles.x)), Mathf.Abs(NormalizeAngle(angles.z)));
-
-        float targetFriction = tiltMagnitude >= slipStartAngle ? slipperyFriction : normalFriction;
-        if (Mathf.Abs(dynamicPhysicMaterial.dynamicFriction - targetFriction) > 0.01f)
-        {
-            dynamicPhysicMaterial.dynamicFriction = targetFriction;
-            dynamicPhysicMaterial.staticFriction = targetFriction;
-        }
-    }
 
     private float NormalizeAngle(float angle)
     {
