@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class GameManager_Sm : NetworkBehaviour
 {
     public static GameManager_Sm Instance;
-    public static GameManager_Sm Instance;
 
     [Header("Scene Management")]
     [SerializeField] private string nextSceneName;
