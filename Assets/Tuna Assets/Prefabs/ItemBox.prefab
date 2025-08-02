@@ -125,3 +125,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0ec3f59a0d4aacc4587e9a566e36a876, type: 2}
   - {fileID: 11400000, guid: 95b08a301f1a3b74b8baaf84f000e5e6, type: 2}
   - {fileID: 11400000, guid: 54ee5d33a7a475540ab00092fb05316d, type: 2}
+  respawnTime: 3
