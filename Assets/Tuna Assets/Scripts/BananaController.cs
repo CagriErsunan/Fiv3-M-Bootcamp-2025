@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Kart.Items
 {
@@ -9,30 +9,26 @@ namespace Kart.Items
         public void Initialize(GameObject ownerKart)
         {
             owner = ownerKart;
-            Destroy(gameObject, 10f); // 10 saniye sonra yok olsun
+            Destroy(gameObject, 10f); // 10 saniye sonra kaybolsun
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            // Kendi muzuna basınca etkilenmez
-            if (other.gameObject == owner) return;
+            if (other.gameObject == owner) return; // Kendi b�rakana etki etmesin
 
             if (other.CompareTag("Player"))
             {
-                Debug.Log("Muz kaydırdı: " + other.name);
+                Debug.Log("Muz kayd�rd�: " + other.name);
 
+                // Basit kayd�rma efekti: Rigidbody'yi yana savur
                 Rigidbody rb = other.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    // 1️⃣ Hızı azalt (Mario Kart hissi)
-                    rb.linearVelocity *= 0.3f;
-
-                    // 2️⃣ Yan kaydırma ve hafif zıplatma
-                    Vector3 slipDir = (other.transform.right + Vector3.up * 0.3f).normalized;
-                    rb.AddForce(slipDir * 10f, ForceMode.VelocityChange);
+                    Vector3 slipDir = (other.transform.right + Vector3.up).normalized;
+                    rb.AddForce(slipDir * 500f);
                 }
 
-                Destroy(gameObject); // Kullanıldı
+                Destroy(gameObject); // Kullan�ld�
             }
         }
     }
