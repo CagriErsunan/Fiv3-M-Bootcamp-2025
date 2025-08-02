@@ -12324,14 +12324,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8741024743278865167}
   - component: {fileID: 4786073164804839822}
-  - component: {fileID: 189301593661168259}
   - component: {fileID: 8863709595176626861}
+  - component: {fileID: 8633877951514954029}
+  - component: {fileID: 189301593661168259}
   - component: {fileID: 3664058873411062843}
   - component: {fileID: 821763447681483331}
   - component: {fileID: 866053142763694609}
   - component: {fileID: 1959498554980922930}
   - component: {fileID: 1032664969357951567}
-  - component: {fileID: 8208743259836391321}
   m_Layer: 10
   m_Name: Player_Prefab_Final
   m_TagString: Player
@@ -12392,29 +12392,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!136 &189301593661168259
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4483921461206425017}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5291327
-  m_Height: 1.9739689
-  m_Direction: 1
-  m_Center: {x: 0.01667583, y: 0.97547203, z: 0}
 --- !u!114 &8863709595176626861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12440,6 +12417,42 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &8633877951514954029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483921461206425017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42ad3fd894962bf428d5b1565df55f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+--- !u!136 &189301593661168259
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483921461206425017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5291327
+  m_Height: 1.9739689
+  m_Direction: 1
+  m_Center: {x: 0.01667583, y: 0.97547203, z: 0}
 --- !u!54 &3664058873411062843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12541,10 +12554,6 @@ MonoBehaviour:
     m_InternalValue: 0
   Role:
     m_InternalValue: 0
-  isEliminated:
-    m_InternalValue: 0
-  playerCamera: {fileID: 826624585173652251, guid: 22eafaa18533aa34d8d6dc7a8c94ac53, type: 3}
-  spectatorCamera: {fileID: 5401694468282215303, guid: 2f99d4b32c848fd4fa75cb0363f49ca4, type: 3}
   cosmeticDatabase: {fileID: 11400000, guid: 72a7ef37d513eb847a46f277491d51f8, type: 2}
 --- !u!114 &1959498554980922930
 MonoBehaviour:
@@ -12609,18 +12618,6 @@ MonoBehaviour:
   UseRigidBodyForMotion: 1
   AutoUpdateKinematicState: 0
   AutoSetKinematicOnDespawn: 0
---- !u!114 &8208743259836391321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4483921461206425017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ad3fd894962bf428d5b1565df55f2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4522482510584844122
 GameObject:
   m_ObjectHideFlags: 0

@@ -4625,7 +4625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  nextSceneName: level_cambaz_tepsisi
+  nextSceneName: GameScene3
   roundDuration: 20
   timerText: {fileID: 1787294754}
   winnerText: {fileID: 2000588926}
@@ -7189,30 +7189,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 80960154011152280, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80960154011152280, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 273299796060606842, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 273299796060606842, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 273299796060606842, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 671783723112841509, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 991456154701048357, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -7295,14 +7271,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1064631543393279835, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1528365154420148015, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6752358793248522695, guid: 28676a922e23bbc418d9b85b0ded02da, type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

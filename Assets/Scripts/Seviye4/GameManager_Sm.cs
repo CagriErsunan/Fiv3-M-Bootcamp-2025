@@ -214,14 +214,14 @@ public class GameManager_Sm : NetworkBehaviour
     private void ShowWinnerClientRpc(ulong winnerId)
     {
         bool isWinner = NetworkManager.Singleton.LocalClientId == winnerId;
-        UIManager_Sm.Instance?.ShowGameOver(isWinner);
+      //  UIManager.Instance?.ShowGameOver(isWinner);
     }
 
     [ClientRpc]
     private void ShowGameOverClientRpc(ulong eliminatedPlayerId)
     {
         bool isEliminated = NetworkManager.Singleton.LocalClientId == eliminatedPlayerId;
-        UIManager_Sm.Instance?.ShowGameOver(!isEliminated);
+       // UIManager.Instance?.ShowGameOver(!isEliminated);
     }
 
     private void PrintAlivePlayers()
