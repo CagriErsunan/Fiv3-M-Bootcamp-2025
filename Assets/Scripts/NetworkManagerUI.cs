@@ -1,50 +1,58 @@
-using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
-// This is now a simple MonoBehaviour. It does not need to be a NetworkBehaviour.
 public class NetworkManagerUI : MonoBehaviour
 {
     [SerializeField] private Button hostButton;
     [SerializeField] private Button clientButton;
-    [SerializeField] private GameObject buttonsPanel; 
+    [SerializeField] private TMP_InputField joinCodeInput;
+    [SerializeField] private GameObject buttonsPanel;
     [SerializeField] private Button exitButton;
 
     private void Awake()
     {
-        hostButton.onClick.AddListener(() => {
-            GameData.CurrentRound = 0;
-            Debug.Log("HOSTING...");
-            NetworkManager.Singleton.StartHost();
-            // After clicking, hide the buttons immediately.
-            buttonsPanel.SetActive(false);
-        });
-
-        clientButton.onClick.AddListener(() => {
-            Debug.Log("JOINING AS CLIENT...");
-            NetworkManager.Singleton.StartClient();
-            // After clicking, hide the buttons immediately.
-            buttonsPanel.SetActive(false);
-        });
+        hostButton.onClick.AddListener(OnHostClicked);
+        clientButton.onClick.AddListener(OnClientClicked);
         exitButton.onClick.AddListener(OnExitGameClicked);
     }
-    
+
+    private async void OnHostClicked()
+    {
+        string joinCode = await RelayManager.Instance.CreateRelay();
+        if (!string.IsNullOrEmpty(joinCode))
+        {
+            if (joinCodeInput != null)
+                joinCodeInput.text = joinCode;
+            buttonsPanel.SetActive(false);
+        }
+    }
+
+    private async void OnClientClicked()
+    {
+        string code = joinCodeInput.text.Trim();
+        if (string.IsNullOrEmpty(code))
+        {
+            Debug.LogWarning("Join code is empty!");
+            return;
+        }
+
+        bool success = await RelayManager.Instance.JoinRelay(code);
+        if (success)
+        {
+            buttonsPanel.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Failed to join relay with this code!");
+        }
+    }
+
     private void OnExitGameClicked()
     {
-        Debug.Log("Player has clicked Exit Game.");
         Application.Quit();
-
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
-    }
-    public void ServerLoadScene(string sceneName)
-    {
-        // This can only be called by the server.
-        if (!NetworkManager.Singleton.IsServer) return;
-
-        Debug.Log($"Persistent Scene Loader is loading scene: {sceneName}");
-        NetworkManager.Singleton.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }
