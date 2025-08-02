@@ -4,6 +4,7 @@ using Unity.Netcode.Components;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.Cinemachine;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(NetworkAnimator))]
 [RequireComponent(typeof(Animator))]
@@ -22,7 +23,7 @@ public class PlayerController : NetworkBehaviour
     [SerializeField] private float hasteSpeedMultiplier = 1.5f; // 50% faster
                                                                 // A reference to the UI element we created.
     private HasteSkillUIController hasteSkillUI;
-    
+
     // A reference to our detection zone script.
     private PredatorZoneController predatorZone;
     // Local variables to manage the skill's state.
@@ -64,8 +65,8 @@ public class PlayerController : NetworkBehaviour
     public NetworkVariable<PlayerRole> Role = new NetworkVariable<PlayerRole>(PlayerRole.Survivor, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private Rigidbody rb;
     private Renderer characterRenderer;
-   // private Color originalColor;
-   // private bool originalColorIsSet = false;
+    // private Color originalColor;
+    // private bool originalColorIsSet = false;
     private Animator animator;
     private Transform mainCameraTransform;
     private bool cameraIsSetUp = false;
@@ -76,8 +77,17 @@ public class PlayerController : NetworkBehaviour
     private bool controlsAreLocked = false;
     private NetworkVariable<float> networkAnimatorSpeed = new NetworkVariable<float>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
     private bool hasWonThisRound = false;
+    ///////
+    [Header("Pushing")]
+    public NetworkVariable<bool> isEliminatedTepsi = new NetworkVariable<bool>(false);
+    private Collider col;
+    [SerializeField] private GameObject playerCamera;
+    [SerializeField] private GameObject spectatorCamera;
+    ///////
     [SerializeField] private CosmeticDatabase cosmeticDatabase;
     [System.Obsolete]
+
+
     public override void OnNetworkSpawn()
     {
         // --- NEW, BETTER COLOR LOGIC ---
@@ -102,7 +112,7 @@ public class PlayerController : NetworkBehaviour
             IsEliminated.Value = false;
         }
         Health.OnValueChanged += OnHealthChanged;
-        
+
         // The rest of your code is correct and stays the same.
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
@@ -122,7 +132,7 @@ public class PlayerController : NetworkBehaviour
         OnIsPushingChanged(false, network_isPushing.Value);
         Role.OnValueChanged += OnRoleChanged;
         // We still call this once to set the initial state correctly.
-        OnRoleChanged(PlayerRole.Survivor, Role.Value);       
+        OnRoleChanged(PlayerRole.Survivor, Role.Value);
         /*if (!IsOwner)
         {
             network_isPushing.OnValueChanged += OnIsPushingChanged;
@@ -133,12 +143,19 @@ public class PlayerController : NetworkBehaviour
         }
         predatorZone = GetComponentInChildren<PredatorZoneController>();
 
-       
+
 
         // Subscribe to role changes to show/hide the UI.
         Role.OnValueChanged += HandleRoleForSkillUI;
         // Call it once to set the initial state.
-       // HandleRoleForSkillUI(PlayerRole.Survivor, Role.Value);
+        // HandleRoleForSkillUI(PlayerRole.Survivor, Role.Value);
+
+        //////////
+        if (playerCamera != null)
+            playerCamera.SetActive(true);
+
+        if (spectatorCamera != null)
+            spectatorCamera.SetActive(false);
     }
     private void HandleRoleForSkillUI(PlayerRole previousRole, PlayerRole newRole)
     {
@@ -147,11 +164,11 @@ public class PlayerController : NetworkBehaviour
         {
             hasteSkillUI.gameObject.SetActive(newRole != PlayerRole.Survivor);
         }
-     /*   else if (IsOwner)
-        {
-            // Add this log in case the UI reference is the problem.
-            Debug.LogError("Haste Skill UI reference is NULL for the owner!");
-        }*/
+        /*   else if (IsOwner)
+           {
+               // Add this log in case the UI reference is the problem.
+               Debug.LogError("Haste Skill UI reference is NULL for the owner!");
+           }*/
     }
 
     private void OnIsCrouchingChanged(bool previousValue, bool newValue)
@@ -200,10 +217,10 @@ public class PlayerController : NetworkBehaviour
         // We still use the coroutine to ensure a clean, physics-safe teleport.
         StartCoroutine(TeleportAndReenable(position, rotation));
     }
-    
+
 
     // --- Update SceneLoaded to re-enable the controller ---
-    
+
     private void OnHealthChanged(int previousValue, int newValue)
     {
         // You could update a health bar UI here if you wanted.
@@ -250,7 +267,7 @@ public class PlayerController : NetworkBehaviour
     {
         EquipCosmetic(glovesContainer, newValue);
     }
-    
+
     void EquipCosmetic(Transform container, int activeIndex)
     {
         // First, disable all items in the container.
@@ -266,33 +283,33 @@ public class PlayerController : NetworkBehaviour
         }
     }
 
-   /* [System.Obsolete]
-    private void OnCollisionStay(Collision collision)
-    {
-        if (!IsOwner) return;
+    /* [System.Obsolete]
+     private void OnCollisionStay(Collision collision)
+     {
+         if (!IsOwner) return;
 
-        if (collision.gameObject.TryGetComponent<PushableBox>(out PushableBox box))
-        {
-            float horizontalInput = Input.GetAxis("Horizontal");
-            bool isTryingToPush = Mathf.Abs(horizontalInput) > 0.1f;
+         if (collision.gameObject.TryGetComponent<PushableBox>(out PushableBox box))
+         {
+             float horizontalInput = Input.GetAxis("Horizontal");
+             bool isTryingToPush = Mathf.Abs(horizontalInput) > 0.1f;
 
-            // The owner's only job is to update the master switch (the NetworkVariable) if the state changes.
-            if (network_isPushing.Value != isTryingToPush)
-            {
-                network_isPushing.Value = isTryingToPush;
-            }
+             // The owner's only job is to update the master switch (the NetworkVariable) if the state changes.
+             if (network_isPushing.Value != isTryingToPush)
+             {
+                 network_isPushing.Value = isTryingToPush;
+             }
 
-            // The RPC calls to physically move the box are still sent based on direct input.
-            if (isTryingToPush)
-            {
-                RequestPushServerRpc(box.NetworkObjectId, new Vector3(horizontalInput, 0, 0));
-            }
-            else
-            {
-                RequestStopPushServerRpc(box.NetworkObjectId);
-            }
-        }
-    }*/
+             // The RPC calls to physically move the box are still sent based on direct input.
+             if (isTryingToPush)
+             {
+                 RequestPushServerRpc(box.NetworkObjectId, new Vector3(horizontalInput, 0, 0));
+             }
+             else
+             {
+                 RequestStopPushServerRpc(box.NetworkObjectId);
+             }
+         }
+     }*/
 
     [ServerRpc]
     public void RequestCosmeticChangeServerRpc(int newItemIndex, CosmeticType type)
@@ -379,7 +396,7 @@ public class PlayerController : NetworkBehaviour
         }
 
         // Wait for the full duration of the animation.
-        yield return new WaitForSeconds(getInfectedDuration+0.1f);
+        yield return new WaitForSeconds(getInfectedDuration + 0.1f);
 
         // --- Step 4: Now that the transformation is complete, turn the ZombieOverride layer ON ---
         animator.SetLayerWeight(zombieLayerIndex, 1f);
@@ -410,19 +427,19 @@ public class PlayerController : NetworkBehaviour
             animator.SetLayerWeight(zombieLayerIndex, isZombie ? 1f : 0f);
         }
     }
-  /*  [ServerRpc]
-    private void RequestGetInfectedAnimationServerRpc()
-    {
-        // This code now runs on the SERVER.
-        // The server tells its authoritative version of the animator to fire the trigger.
-        if (animator != null)
-        {
-            animator.SetTrigger("GetInfected");
-        }
+    /*  [ServerRpc]
+      private void RequestGetInfectedAnimationServerRpc()
+      {
+          // This code now runs on the SERVER.
+          // The server tells its authoritative version of the animator to fire the trigger.
+          if (animator != null)
+          {
+              animator.SetTrigger("GetInfected");
+          }
 
-        // The NetworkAnimator component will see this trigger on the server
-        // and automatically replicate it to all clients, including the Host.
-    }*/
+          // The NetworkAnimator component will see this trigger on the server
+          // and automatically replicate it to all clients, including the Host.
+      }*/
     [System.Obsolete]
     private void SceneLoaded(string sceneName, UnityEngine.SceneManagement.LoadSceneMode loadSceneMode, System.Collections.Generic.List<ulong> clientsCompleted, System.Collections.Generic.List<ulong> clientsTimedOut)
     {
@@ -438,9 +455,9 @@ public class PlayerController : NetworkBehaviour
             RequestRoleResetServerRpc();
 
             // We can also ask the server to reset our health here.
-            
+
         }
-        
+
         // --- THE FIX ---
         // When a new scene loads, EVERYONE needs to re-enable their controller.
         if (IsOwner)
@@ -487,12 +504,12 @@ public class PlayerController : NetworkBehaviour
         if (!IsOwner) return;
         if (IsOwner && !cameraIsSetUp)
         {
-           // SetupCamera();
+            // SetupCamera();
         }
 
         if (IsOwner)
         {
-           
+
             // The owner calculates their current speed based on their Rigidbody's velocity.
             float currentSpeed = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z).magnitude;
 
@@ -532,7 +549,7 @@ public class PlayerController : NetworkBehaviour
                         if (!IsServer)
                         {
                             // Client predicts the wall jump.
-                            
+
                             PerformWallJump(wallNormal);
                         }
                         // Tell the server to perform the authoritative wall jump.
@@ -558,7 +575,7 @@ public class PlayerController : NetworkBehaviour
             } // RPC for the new emote
         }
         animator.SetFloat("Speed", networkAnimatorSpeed.Value);
-        
+
         if (hasteCooldownTimer > 0)
         {
             hasteCooldownTimer -= Time.deltaTime;
@@ -581,22 +598,22 @@ public class PlayerController : NetworkBehaviour
             }
         }
     }
-   /* private void InitializeUI()
-    {
-        // Try to find the UI object in the scene.
-        GameObject uiGO = GameObject.FindWithTag("HasteSkillUI");
-        if (uiGO != null)
-        {
-            // If we found it, get the component and set our flag to true.
-            hasteSkillUI = uiGO.GetComponent<HasteSkillUIController>();
-            uiInitialized = true; // Success! We won't search anymore.
+    /* private void InitializeUI()
+     {
+         // Try to find the UI object in the scene.
+         GameObject uiGO = GameObject.FindWithTag("HasteSkillUI");
+         if (uiGO != null)
+         {
+             // If we found it, get the component and set our flag to true.
+             hasteSkillUI = uiGO.GetComponent<HasteSkillUIController>();
+             uiInitialized = true; // Success! We won't search anymore.
 
-            // Now that we've found it, re-run the logic to make sure it's shown/hidden correctly.
-            HandleRoleForSkillUI(Role.Value, Role.Value);
-            Debug.Log("Haste Skill UI Initialized Successfully!");
-        }
-    }*/
-        // If we don't find it, we do nothing. The Update loop will try again next frame.
+             // Now that we've found it, re-run the logic to make sure it's shown/hidden correctly.
+             HandleRoleForSkillUI(Role.Value, Role.Value);
+             Debug.Log("Haste Skill UI Initialized Successfully!");
+         }
+     }*/
+    // If we don't find it, we do nothing. The Update loop will try again next frame.
 
     private bool CanWallJump(out Vector3 wallNormal)
     {
@@ -623,7 +640,7 @@ public class PlayerController : NetworkBehaviour
         Vector3 jumpDirection = (Vector3.up + wallNormal).normalized;
 
         // Apply the force. We cancel out any previous velocity for a snappy feel.
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         rb.AddForce(jumpDirection * wallJumpForce, ForceMode.Impulse);
 
         // Play the jump animation.
@@ -640,7 +657,7 @@ public class PlayerController : NetworkBehaviour
         // A more secure version would re-do the raycast here to prevent cheating. For now, this is fine.
 
         Vector3 jumpDirection = (Vector3.up + wallNormal).normalized;
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         rb.AddForce(jumpDirection * wallJumpForce, ForceMode.Impulse);
         animator.SetTrigger("Jump");
         WallJumpRotationClientRpc(wallNormal);
@@ -674,14 +691,14 @@ public class PlayerController : NetworkBehaviour
     }
 
     [ServerRpc]
-     private void RequestDanceServerRpc()
-     {
-         // This code runs on the server.
-         // It tells the animator on the server's version of this player to dance.
-         // The NetworkAnimator will then sync this trigger to all clients.
-         animator.SetTrigger("Dance");
-     }
-    
+    private void RequestDanceServerRpc()
+    {
+        // This code runs on the server.
+        // It tells the animator on the server's version of this player to dance.
+        // The NetworkAnimator will then sync this trigger to all clients.
+        animator.SetTrigger("Dance");
+    }
+
     // We use OnTriggerEnter to detect collisions with our special zones.
     [System.Obsolete]
     // Inside PlayerController.cs
@@ -733,7 +750,7 @@ public class PlayerController : NetworkBehaviour
             }
         }
     }
-    
+
     [System.Obsolete]
     private void OnTriggerEnter(Collider other)
     {
@@ -805,7 +822,7 @@ public class PlayerController : NetworkBehaviour
         }
     }
 
-   
+
     [System.Obsolete]
     public void Respawn()
     {
@@ -897,16 +914,16 @@ public class PlayerController : NetworkBehaviour
     */
     // ---- The rest of the script remains the same ----
 
-    
-   /* private void SetupCamera()
-    {
-        CameraFollow cameraFollow = FindObjectOfType<CameraFollow>();
-        if (cameraFollow != null)
-        {
-            cameraFollow.target = this.transform;
-            cameraIsSetUp = true;
-        }
-    }*/
+
+    /* private void SetupCamera()
+     {
+         CameraFollow cameraFollow = FindObjectOfType<CameraFollow>();
+         if (cameraFollow != null)
+         {
+             cameraFollow.target = this.transform;
+             cameraIsSetUp = true;
+         }
+     }*/
 
     [System.Obsolete]
     private void FixedUpdate()
@@ -916,7 +933,7 @@ public class PlayerController : NetworkBehaviour
         if (network_isCrouching.Value)
         {
             // We can also ensure our Rigidbody comes to a stop.
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
             return;
         }
 
@@ -937,7 +954,7 @@ public class PlayerController : NetworkBehaviour
         {
             return;
         }
-        
+
 
         CheckForLaunchPad();
 
@@ -1069,7 +1086,7 @@ public class PlayerController : NetworkBehaviour
         // It's also a good idea to stop any current movement.
         if (rb != null)
         {
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
             animator.SetFloat("Speed", 0);
         }
 
@@ -1127,8 +1144,8 @@ public class PlayerController : NetworkBehaviour
         LaunchPlayerClientRpc(direction, force, new ClientRpcParams
         {
             Send = new ClientRpcSendParams { TargetClientIds = new[] { OwnerClientId } }
-        });       
-        
+        });
+
         // Apply the launch force.
         //rb.velocity = Vector3.zero; // Reset any existing velocity.
         // rb.velocity = direction * force;
@@ -1143,10 +1160,10 @@ public class PlayerController : NetworkBehaviour
         if (!IsOwner) return;
         RequestSetGlidingStateServerRpc(true);
         //rb.velocity = direction * force;
-       // network_isGliding.Value = true;
-        rb.velocity = Vector3.zero;
+        // network_isGliding.Value = true;
+        rb.linearVelocity = Vector3.zero;
         rb.AddForce(direction * force, ForceMode.Impulse);
-       // rb.velocity = direction * force;
+        // rb.velocity = direction * force;
 
         // Start the lockout to protect the velocity from FixedUpdate.
         StartCoroutine(LaunchLockout());
@@ -1224,5 +1241,52 @@ public class PlayerController : NetworkBehaviour
     private void RequestNewEmoteServerRpc()
     {
         animator.SetTrigger("NewEmote");
+    }
+
+    ///////////////////// PLATFORM ELIMINATION LOGIC ///////////////////////
+    public void Eliminate()
+    {
+        if (!IsServer) return;
+
+        if (!isEliminatedTepsi.Value)
+        {
+            Debug.Log($"Player {OwnerClientId} has been eliminated and is now a spectator.");
+            isEliminatedTepsi.Value = true;
+            EnterSpectatorModeClientRpc();
+        }
+        
+    }
+
+    [ClientRpc]
+    private void EnterSpectatorModeClientRpc()
+    {
+        // Disable player movement or gravity
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.useGravity = false;
+            rb.isKinematic = true;
+        }
+
+        // Disable collider to prevent interactions
+        if (col != null)
+            col.enabled = false;
+
+        // Optional: hide player model or UI
+
+        // Switch to spectator camera
+        if (IsOwner)
+        {
+            Debug.Log($"Player {OwnerClientId} entered spectator mode.");
+            if (playerCamera != null) playerCamera.SetActive(false);
+            if (spectatorCamera != null) spectatorCamera.SetActive(true);
+        }
+
+        
+    }
+
+    void Awake()
+    {
+        col = GetComponent<Collider>();
     }
 }

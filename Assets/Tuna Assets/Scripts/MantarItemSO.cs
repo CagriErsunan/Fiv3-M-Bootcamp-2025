@@ -1,31 +1,32 @@
 using UnityEngine;
+using System.Collections;
 
 namespace Kart.Items
 {
-    [CreateAssetMenu(menuName = "Kart/Items/Mantar")]
+    [CreateAssetMenu(menuName = "Kart/Items/Mantar Item")]
     public class MantarItemSO : KartItemSO
     {
-        public float boostForce = 30f;     // �leriye iti� kuvveti
-        public float boostDuration = 2f;  // Ka� saniye s�recek
+        public float boostForce = 30f;
+        public float boostDuration = 2f;
 
         public override void UseItem(GameObject owner)
         {
             Rigidbody rb = owner.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                // Hemen ileri do�ru iti� uygula
+                // İleri yönde hızlandır
                 Vector3 boostDir = owner.transform.forward;
                 rb.AddForce(boostDir * boostForce, ForceMode.VelocityChange);
 
-                // Boost efekti ba�lat
-                owner.GetComponent<MonoBehaviour>().StartCoroutine(ResetSpeed(rb, boostDuration));
+                // Boost süresi bitince hızı azalt
+                owner.GetComponent<KartInventory>().StartCoroutine(ResetSpeed(rb, boostDuration));
             }
         }
 
-        private System.Collections.IEnumerator ResetSpeed(Rigidbody rb, float duration)
+        private IEnumerator ResetSpeed(Rigidbody rb, float duration)
         {
             yield return new WaitForSeconds(duration);
-            rb.linearVelocity *= 0.5f; // H�z�n yar�s�na d���r, ya da direkt eski h�z�na �ekebilirsin
+            rb.linearVelocity *= 0.5f; // Hızı yarıya düşür
         }
     }
 }

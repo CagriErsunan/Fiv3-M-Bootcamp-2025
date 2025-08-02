@@ -8,18 +8,25 @@ TagManager:
   - Bullet
   - Platform
   - Zemin
+  - SpawnPoint
+  - HasteSkillUI
+  - Trap
+  - Pushable
+  - Projectile
+  - DeathZone
+  - EndPoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacles
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Boss
+  - Projectile
+  - Wall
+  - PlayerTriggers
+  - Player
   - 
   - 
   - 

@@ -14,15 +14,25 @@ namespace Kart.Items
             Transform firePoint = owner.transform.Find("FirePoint");
             if (firePoint == null) return;
 
-            var rocket = Kart.Core.ObjectPool.Instance.SpawnFromPool(poolTag, firePoint.position, firePoint.rotation);
+            // Roketi ObjectPool'dan al
+            GameObject rocket = Kart.Core.ObjectPool.Instance.SpawnFromPool(poolTag, firePoint.position, firePoint.rotation);
             if (rocket == null) return;
 
+            // Roket Controller'� initialize et
+            var controller = rocket.GetComponent<RoketController>();
+            if (controller != null)
+                controller.Initialize(owner);
+
+            // Rigidbody ile h�z ver
             Rigidbody rb = rocket.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.linearVelocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero; // linearVelocity yanl��!
                 rb.AddForce(firePoint.forward * fireForce, ForceMode.VelocityChange);
             }
+
+            // Roketi belirli s�re sonra yok et
+            GameObject.Destroy(rocket, lifeTime);
         }
     }
 }

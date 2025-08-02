@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene5_BossArena.unity
     guid: 2c01bb0fe0a466540bceeeb08d6b00d1
+  - enabled: 1
+    path: Assets/Tuna Assets/TunaScenes/Tuna Scene.unity
+    guid: 630487a265dbdb64b8213090fd5bfcb4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

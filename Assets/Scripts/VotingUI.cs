@@ -10,6 +10,7 @@ public class VotingUI : MonoBehaviour
     private GameManager gameManager;
     private GameManager_Zombie gameManagerZombie;
     private GameManager_BossArena gameManagerBoss;
+    private GameManager_Tepsi gameManagerTepsi; // For the Tepsi level
 
     // When the voting panel is enabled, we find our manager.
     [System.Obsolete]
@@ -19,6 +20,7 @@ public class VotingUI : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         gameManagerZombie = FindObjectOfType<GameManager_Zombie>();
         gameManagerBoss = FindObjectOfType<GameManager_BossArena>();
+        gameManagerTepsi = FindObjectOfType<GameManager_Tepsi>();
     }
 
     private void Start()
@@ -41,6 +43,10 @@ public class VotingUI : MonoBehaviour
         else if (gameManagerBoss != null)
         {
             gameManagerBoss.ReceiveVote(vote);
+        }
+        else if (gameManagerTepsi != null)
+        {
+            gameManagerTepsi.ReceiveVote(vote);
         }
         else
         {
