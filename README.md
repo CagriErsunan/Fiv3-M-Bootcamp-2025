@@ -153,16 +153,18 @@ Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saa
 
 - **Sprint Notları** : User Story detayları ve görevlerin detayları Backlog Board'lardaki hikayelerin içinde yer almaktadır.
   
-- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 100 puan. Sprint-2'de hedeflediğimiz puan: 50. Sprint 2 boyunca tamamladığımız puan: 37
+- **Tahmin Edilen Tamamlanacak Puan**: Proje boyunca tamamlamayı beklediğimiz puan aşağıdaki puanlama mantığını 3 sprinte yayarak düşünürsek: 100 puan. Sprint-3'de hedeflediğimiz puan: 80. Sprint 2 boyunca tamamladığımız puan: 80. Proje sonunda tamamalanan toplan puan: 123 puan.
+
   
 - **Tahmin Mantığı**: Görev puanlaması, Scrum metodolojisinde kullanılan **Story Point** sistemine göre yapılmıştır.  
 Puanlar, görevin teknik karmaşıklığı, belirsizlik düzeyi ve gereken çaba baz alınarak ekipçe tahminlenmiştir.  
-Referans görevi olarak "Bölümlerin konseptlerinin belirlenmesi" 1 SP olarak alınmış ve diğer görevler bu temele göre oranlanmıştır.  
+Referans görevi olarak "Lobi Sahnesinde Oyun kontrollerini anlatan etkileşimli NPC" 1 SP olarak alınmış ve diğer görevler bu temele göre oranlanmıştır.  
 Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saatlik katkısı esas alınarak **yaklaşık 10 SP** olarak belirlenmiştir. İşte SPRINT 1'de tamamlanan görevlerimiz için Bu mantığa göre puan dağılımımız:
-- <img width="687" height="1105" alt="1" src="https://github.com/user-attachments/assets/9afaf6b1-71ea-47af-b8ee-b5aa4dec03fc" />
-- <img width="685" height="583" alt="2" src="https://github.com/user-attachments/assets/74d76698-655a-45a0-ad8b-345263132e3d" />
+- <img width="837" height="1093" alt="tablo1" src="https://github.com/user-attachments/assets/09a14a47-937b-4c43-b21e-b7ce6fde6fad" />
+- <img width="837" height="1071" alt="tablo2" src="https://github.com/user-attachments/assets/407fedbb-db55-4233-aa24-743650cbbca3" />
+- <img width="837" height="83" alt="tablo3" src="https://github.com/user-attachments/assets/cc8ae957-49ca-4734-9fb3-8cd83c4c33a0" />
 
-- **Daily Scrum**: Toplantılarımız ve konuşmalarımız WhatsApp ve Slack üzerinden yapılmaktadır. Toplantı Ekran görüntüleri: https://imgur.com/a/cbLCQjw
+- **Daily Scrum**: Toplantılarımız ve konuşmalarımız WhatsApp ve Slack üzerinden yapılmaktadır. Toplantı Ekran görüntüleri: [https://imgur.com/a/cbLCQjw](https://imgur.com/a/JHuzoBx)
   
 - **Sprint Board Updates**: <img width="1853" height="1047" alt="tablo1" src="https://github.com/user-attachments/assets/4efa8ba2-1113-4ba1-b13d-e314792d7a5f" />
   <img width="1851" height="1051" alt="tablo2" src="https://github.com/user-attachments/assets/a4c02ece-84ff-49f4-bdcd-5c14e7dda974" />
