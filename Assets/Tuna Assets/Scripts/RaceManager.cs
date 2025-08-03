@@ -8,76 +8,98 @@ namespace Kart.Race
     {
         public static RaceManager Singleton;
 
-        [Header("Race Settings")]
-        public int totalLaps = 3;
-        public int maxPlayers = 5; // puan tablosu için
+        [SerializeField] private int totalLaps = 3;
 
-        private List<ulong> finishOrder = new List<ulong>(); // sıralamayı tutar
-        private Dictionary<ulong, int> playerScores = new Dictionary<ulong, int>();
+        // Oyuncu -> Bitirdiği tur sayısı
+        private Dictionary<ulong, int> playerLapDict = new Dictionary<ulong, int>();
+        private List<ulong> finishedPlayers = new List<ulong>();
 
-        private void Awake() => Singleton = this;
-
-        [ServerRpc(RequireOwnership = false)]
-        public void FinishRaceServerRpc(ulong playerId)
+        private void Awake()
         {
-            if (finishOrder.Contains(playerId)) return; // Aynı oyuncu iki kez bitiremez
-
-            finishOrder.Add(playerId);
-            int position = finishOrder.Count;
-
-            int score = CalculateScore(position);
-            playerScores[playerId] = score;
-
-            Debug.Log($"Player {playerId} finished! Pos {position}, Score {score}");
-
-            // Scoreboard'u tüm clientlere gönder
-            string finalBoard = GetScoreboard();
-            FinishRaceClientRpc(playerId, position, score, finalBoard);
+            if (Singleton == null)
+                Singleton = this;
+            else
+                Destroy(gameObject);
         }
 
-        [ClientRpc]
-        private void FinishRaceClientRpc(ulong playerId, int position, int score, string finalBoard)
+        /// <summary>
+        /// Oyuncu yeni bir lap tamamladı
+        /// </summary>
+        public void RegisterLap(ulong clientId)
         {
-            Debug.Log($"Player {playerId} finished. Pos {position}, Score {score}");
+            if (!playerLapDict.ContainsKey(clientId))
+                playerLapDict[clientId] = 0;
 
-            // Sadece kendi oyuncusunda scoreboard göster
-            foreach (var kart in FindObjectsOfType<RaceUI>())
+            playerLapDict[clientId]++;
+
+            Debug.Log($"Player {clientId} Lap: {playerLapDict[clientId]}/{totalLaps}");
+
+            if (playerLapDict[clientId] >= totalLaps && IsServer)
             {
-                if (kart.IsOwner)
+                FinishRaceServerRpc(clientId);
+            }
+        }
+
+        /// <summary>
+        /// Oyuncunun sıralamasını döner
+        /// </summary>
+        public int GetPlayerPosition(ulong clientId)
+        {
+            if (!playerLapDict.ContainsKey(clientId))
+                return 0;
+
+            int myLap = playerLapDict[clientId];
+            int position = 1;
+
+            foreach (var kvp in playerLapDict)
+            {
+                if (kvp.Value > myLap)
+                    position++;
+            }
+
+            return position;
+        }
+
+        /// <summary>
+        /// Server: Oyuncu yarışı bitirdiğinde çağrılır
+        /// </summary>
+        [ServerRpc(RequireOwnership = false)]
+        public void FinishRaceServerRpc(ulong clientId)
+        {
+            if (!finishedPlayers.Contains(clientId))
+            {
+                finishedPlayers.Add(clientId);
+                Debug.Log($"Player {clientId} finished the race! Position: {finishedPlayers.Count}");
+
+                // Eğer tüm oyuncular bitirdiyse scoreboard hazırlanır
+                if (finishedPlayers.Count == NetworkManager.Singleton.ConnectedClients.Count)
                 {
-                    kart.ShowScoreboard(finalBoard);
+                    Debug.Log("All players finished the race!");
+                    ShowScoreboardToAll();
                 }
             }
         }
 
-        private int CalculateScore(int position)
+        /// <summary>
+        /// Herkes bitirdiğinde scoreboard'u tüm clientlara göster
+        /// </summary>
+        private void ShowScoreboardToAll()
         {
-            switch (position)
-            {
-                case 1: return 5;
-                case 2: return 3;
-                case 3: return 2;
-                case 4: return 1;
-                default: return 0;
-            }
-        }
+            string finalScores = "🏆 FINAL RESULTS 🏆\n";
 
-        public int GetPlayerPosition(ulong playerId)
-        {
-            int index = finishOrder.IndexOf(playerId);
-            return index >= 0 ? index + 1 : 0;
-        }
-
-        public string GetScoreboard()
-        {
-            string result = "Final Scores:\n";
-            for (int i = 0; i < finishOrder.Count; i++)
+            for (int i = 0; i < finishedPlayers.Count; i++)
             {
-                ulong playerId = finishOrder[i];
-                int score = playerScores[playerId];
-                result += $"{i + 1}. Player {playerId} - {score} pts\n";
+                finalScores += $"{i + 1}. Player {finishedPlayers[i]}\n";
             }
-            return result;
+
+            foreach (var client in NetworkManager.Singleton.ConnectedClients.Values)
+            {
+                var raceUI = client.PlayerObject.GetComponent<Kart.Race.RaceUI>();
+                if (raceUI != null)
+                {
+                    raceUI.ShowScoreboard(finalScores);
+                }
+            }
         }
     }
 }

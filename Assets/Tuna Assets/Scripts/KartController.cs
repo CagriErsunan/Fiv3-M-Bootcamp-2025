@@ -1,6 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Unity.Netcode;
-using NUnit;
 using Kart.Items;
 
 namespace Kart
@@ -10,13 +9,22 @@ namespace Kart
         public float acceleration = 15f;
         public float maxSpeed = 25f;
         public float turnSpeed = 120f;
-        KartInventory inv;
+
         private Rigidbody rb;
+        private KartInventory inv;
+
+        // 🔹 Scoreboard için eklendi
+        public NetworkVariable<int> PlayerScore = new NetworkVariable<int>(
+            0,
+            NetworkVariableReadPermission.Everyone,
+            NetworkVariableWritePermission.Server
+        );
+
         public override void OnNetworkSpawn()
         {
             if (IsOwner)
             {
-                // Basit test i�in �imdilik yukar� koy
+                // Basit test spawn
                 transform.position = new Vector3(0, 2, 0);
                 transform.rotation = Quaternion.identity;
             }
@@ -48,6 +56,11 @@ namespace Kart
             }
         }
 
-
+        // 🔹 Lap veya skor artırma için kullanılacak
+        [ServerRpc(RequireOwnership = false)]
+        public void AddScoreServerRpc(int value)
+        {
+            PlayerScore.Value += value;
+        }
     }
 }

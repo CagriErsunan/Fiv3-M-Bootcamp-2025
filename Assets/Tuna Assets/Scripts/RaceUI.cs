@@ -12,7 +12,7 @@ namespace Kart.Race
         public TextMeshProUGUI positionText;
         public GameObject scoreboardPanel;
         public TextMeshProUGUI scoreboardText;
-        public Image itemImage; // ✅ Yeni eklendi
+        public Image itemImage; // Elde edilen item ikonunu gösterir
 
         private PlayerLapTracker lapTracker;
         private Kart.Items.KartInventory inventory;
@@ -22,17 +22,18 @@ namespace Kart.Race
             lapTracker = GetComponent<PlayerLapTracker>();
             inventory = GetComponent<Kart.Items.KartInventory>();
 
+            // Sadece owner kendi UI'sini görsün
             if (!IsOwner)
             {
-                lapText.gameObject.SetActive(false);
-                positionText.gameObject.SetActive(false);
-                itemImage.gameObject.SetActive(false);
+                if (lapText != null) lapText.gameObject.SetActive(false);
+                if (positionText != null) positionText.gameObject.SetActive(false);
+                if (itemImage != null) itemImage.gameObject.SetActive(false);
             }
 
             if (scoreboardPanel != null)
                 scoreboardPanel.SetActive(false);
 
-            // ✅ Item değiştiğinde UI'yi güncelle
+            // Item değiştiğinde UI güncelle
             if (inventory != null)
             {
                 inventory.OnItemChanged += UpdateItemUI;
@@ -43,10 +44,17 @@ namespace Kart.Race
         {
             if (!IsOwner || lapTracker == null) return;
 
+            // Lap UI güncelle
             lapText.text = $"Lap {lapTracker.Lap}/{lapTracker.totalLaps}";
 
-            int position = RaceManager.Singleton.GetPlayerPosition(OwnerClientId);
-            positionText.text = position > 0 ? $"Position: {position}{GetOrdinal(position)}" : "Racing...";
+            // Pozisyonu RaceManager’dan al
+            if (RaceManager.Singleton != null)
+            {
+                int position = RaceManager.Singleton.GetPlayerPosition(OwnerClientId);
+                positionText.text = position > 0
+                    ? $"Position: {position}{GetOrdinal(position)}"
+                    : "Racing...";
+            }
         }
 
         private void UpdateItemUI(Kart.Items.KartItemSO item)
@@ -68,8 +76,8 @@ namespace Kart.Race
         public void ShowScoreboard(string finalScores)
         {
             if (!IsOwner) return;
-            scoreboardPanel.SetActive(true);
-            scoreboardText.text = finalScores;
+            if (scoreboardPanel != null) scoreboardPanel.SetActive(true);
+            if (scoreboardText != null) scoreboardText.text = finalScores;
         }
 
         private string GetOrdinal(int num)
