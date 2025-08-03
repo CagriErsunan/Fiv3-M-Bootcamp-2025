@@ -187,6 +187,7 @@ Sprint başına tahmini kapasite; 5 kişilik ekibin haftalık ortalama 6–8 saa
       <img width="2551" height="1297" alt="3" src="https://github.com/user-attachments/assets/31c6fa85-ed33-4cce-8b3e-1ea9875cb1fe" />
       <img width="2554" height="1319" alt="2" src="https://github.com/user-attachments/assets/7c1c987a-5715-404d-90b6-52344b590fa1" />
       <img width="2557" height="1319" alt="1" src="https://github.com/user-attachments/assets/79e94b22-f549-449d-81f4-98a146aaba4c" />
+      <img width="2557" height="1319" alt="1" src="https://github.com/user-attachments/assets/1be13c9e-17b4-4df6-a6ff-4183242cc142" />
       
   </details>
  
@@ -229,4 +230,3 @@ Daha gelişmiş olan Boss Arena'mızda, uyarlanabilir bir yapay zeka rakibi bulu
 
     - Oyunumuz için Steam sayfası açılması ve/veya itch.io ya yüklenmesi yapılması.
     - Oyunun içine reklamlar koyulması.
-
