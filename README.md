@@ -8,13 +8,11 @@ Ekip Üyeleri:
 - Semiha Dalcalı - Devloper()
 
 Proje ismi: Move It!
-Oyun Açıklaması: 
+Oyun Açıklaması: Oyunumuz içerisinde bulmaca, yarış, platform, denge oyunları, zombi bölümü, boss savaşı gibi mini oyunlar içeren bir multiplayer party oyunudur. Paralel evrenleri gözetleyen bir gözlemcinin delirmesi sonucunda paralel evrenlerden oyuncularımızı mini oyunlar oynatarak eğlenmek istiyor.
+Biz oyuncular olarak da kafa karıştıran bulmacaları, zorlu yarışları ve acımasız boss savaşlarını geçerek evrenlerimizi kurtarmaya çalışıyoruz.
+
 Oyunun Hikayesi: Multi Madness adlı aşırı sıkılan bir Overlord varmış. Bu overlord o kadar sıkılmış ki bir yarışma düzenleme kararı almış. Ardından farklı evrenlerdeki ilgisini çeken oyuncuları zorla kendi arenasına sürüklemiş. Oyuncular hayatta kalmak ve kendi evrenlerine dönmek için yarışmaya başlamışlar.
 -Multi Madness(Sıkılmış bir kötü adam)
-
-Özellikler:
-Hedef Kitle:
-
 
 
 ### SPRINT 1
