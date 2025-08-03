@@ -6337,13 +6337,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5401694468282215303, guid: 2f99d4b32c848fd4fa75cb0363f49ca4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6453184852128789131, guid: 2f99d4b32c848fd4fa75cb0363f49ca4, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3430097985153314519, guid: 2f99d4b32c848fd4fa75cb0363f49ca4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
