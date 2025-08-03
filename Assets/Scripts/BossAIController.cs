@@ -37,6 +37,8 @@ public class BossAIController : NetworkBehaviour
     [SerializeField] private GameObject explosionVFXPrefab; // The X and Z size of the playable area
     private Animator animator;
     private int currentDifficultyTier = 0;
+    private GameManager_BossArena gameManager;
+
     // A synced variable to track the boss's current state.
     // Only the server can change it.
     private NetworkVariable<BossState> network_currentState = new NetworkVariable<BossState>(BossState.Idle);
@@ -52,13 +54,17 @@ public class BossAIController : NetworkBehaviour
     }
 
     // This function runs once when the boss is spawned on the network.
+    [System.Obsolete]
     public override void OnNetworkSpawn()
     {
         animator = GetComponent<Animator>();
 
         // This AI logic should only ever run on the server.
         if (!IsServer) return;
-
+        if (IsServer)
+        {
+            gameManager = FindObjectOfType<GameManager_BossArena>();
+        }
         // When the boss spawns, start its "thinking" process.
         StartCoroutine(BossLogicRoutine());
     }
@@ -201,45 +207,56 @@ public class BossAIController : NetworkBehaviour
     }
     private IEnumerator GroundSlamAttack()
     {
-        // --- Phase 1: Preparation ---
+        // Phase 1: Preparation (is the same)
         network_currentState.Value = BossState.Attacking;
         PlayAnimationTriggerClientRpc("AttackGroundSlam");
-        yield return new WaitForSeconds(0.5f); // Wind-up time
+        yield return new WaitForSeconds(0.5f);
 
-        // --- Phase 2: Create Warnings ---
-        Debug.Log("Server: Starting Ground Slam attack!");
+        // Phase 2: Create Warnings (THE NEW LOGIC)
+        Debug.Log("Server: Starting SMART Ground Slam attack!");
         List<Vector3> explosionPositions = new List<Vector3>();
 
-        // Find random positions for the explosions.
-        for (int i = 0; i < numberOfExplosions; i++)
+        if (gameManager != null)
         {
-            float randomX = Random.Range(-arenaSize.x / 2, arenaSize.x / 2);
-            float randomZ = Random.Range(-arenaSize.y / 2, arenaSize.y / 2);
-            // We assume the ground is at Y=0.
-            Vector3 position = new Vector3(randomX, 0, randomZ);
-            explosionPositions.Add(position);
+            // Find positions for the explosions using the AI's "brain".
+            for (int i = 0; i < numberOfExplosions; i++)
+            {
+                // Ask the GameManager for the current hottest spot.
+                Vector3 position = gameManager.GetHottestTargetPosition();
+
+                // Add a little bit of random offset so the attacks aren't always in the exact center of a tile.
+                position.x += Random.Range(-1f, 1f);
+                position.z += Random.Range(-1f, 1f);
+
+                explosionPositions.Add(position);
+            }
+        }
+        else
+        {
+            // Fallback to the old random logic if the manager isn't found.
+            for (int i = 0; i < numberOfExplosions; i++)
+            {
+                float randomX = Random.Range(-arenaSize.x / 2, arenaSize.x / 2);
+                float randomZ = Random.Range(-arenaSize.y / 2, arenaSize.y / 2);
+                explosionPositions.Add(new Vector3(randomX, 0, randomZ));
+            }
         }
 
-        // Tell all clients to show the warning visuals at these positions.
-        ShowGroundWarningsClientRpc(explosionPositions.ToArray());
 
-        // Wait for the warning period.
+        // The rest of the function is exactly the same as before.
+        // It takes the list of positions and creates the warnings and explosions.
+        ShowGroundWarningsClientRpc(explosionPositions.ToArray());
         yield return new WaitForSeconds(warningDuration);
 
-        // --- Phase 3: Create Explosions ---
         foreach (Vector3 pos in explosionPositions)
         {
-            // Spawn the invisible, networked damage trigger prefab.
             GameObject explosionGO = Instantiate(groundExplosionPrefab, pos, Quaternion.identity);
             explosionGO.GetComponent<NetworkObject>().Spawn();
-
-            // Destroy the explosion object after a short time to clean up.
             Destroy(explosionGO, 0.5f);
-            SpawnExplosionVFXClientRpc(pos);            
+            SpawnExplosionVFXClientRpc(pos);
         }
 
-        // --- Phase 4: Cooldown ---
-        yield return new WaitForSeconds(1.0f); // Animation finish time
+        yield return new WaitForSeconds(1.0f);
         network_currentState.Value = BossState.Idle;
     }
     [ClientRpc]
