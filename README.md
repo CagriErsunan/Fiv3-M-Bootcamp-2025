@@ -3,7 +3,7 @@ Ekip Üyeleri:
 - Tunahan Karabulut - Product Owner()
 - Çağrı Ersunan - Scrum Master(https://www.linkedin.com/in/cagri-ersunan/)
 - Can Ceylan - Developer()
-- Begüm - Developer()
+- Begüm Orak - Developer()
 - Semiha Dalcalı - Devloper()
 
 Proje ismi: Move It!
