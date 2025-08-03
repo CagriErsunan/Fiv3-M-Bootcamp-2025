@@ -2,7 +2,7 @@ Takım ismi: Fiv3-M
 Ekip Üyeleri: 
 - Tunahan Karabulut - Product Owner()
 - Çağrı Ersunan - Scrum Master(https://www.linkedin.com/in/cagri-ersunan/)
-- Can Ceylan - Developer()
+- Can Ceylan - Developer(https://www.linkedin.com/in/can-ceylan-a636802a3)
 - Begüm Orak - Developer()
 - Semiha Dalcalı - Devloper()
 
