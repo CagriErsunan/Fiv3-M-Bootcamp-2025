@@ -1,5 +1,10 @@
 Takım ismi: Fiv3-M
-Ekip Üyeleri:
+Ekip Üyeleri: 
+- Tunahan Karabulut - Product Owner
+- Çağrı Ersunan - Scrum Master
+- Can Ceylan - Developer
+- Begüm - Developer
+- Semiha Dalcalı - Devloper
 
 Proje ismi: Move It!
 Oyun Açıklaması: 
