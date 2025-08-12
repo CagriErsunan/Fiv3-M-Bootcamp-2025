@@ -5,7 +5,7 @@ Ekip Üyeleri:
 - Çağrı Ersunan - Scrum Master(https://www.linkedin.com/in/cagri-ersunan/)
 - Can Ceylan - Developer(https://www.linkedin.com/in/can-ceylan-a636802a3)
 - Begüm Orak - Developer()
-- Semiha Dalcalı - Devloper()
+- Semiha Dalcalı - Devloper(https://www.linkedin.com/in/semihadalcali29/)
 
 Proje ismi: Move It!
 Oyun Açıklaması: Oyunumuz içerisinde bulmaca, yarış, platform, denge oyunları, zombi bölümü, boss savaşı gibi mini oyunlar içeren bir multiplayer party oyunudur. Paralel evrenleri gözetleyen bir gözlemcinin delirmesi sonucunda paralel evrenlerden oyuncularımızı mini oyunlar oynatarak eğlenmek istiyor.
